@@ -32,7 +32,11 @@
 
 - (void)configNavBar {
     //coneria
+    
     self.navigationItem.title = [NSString stringWithFormat:@"Persolio"];
+//    [self.navigationController.navigationBar setTitleTextAttributes:
+//     @{NSForegroundColorAttributeName:[UIColor blackColor],
+//       NSFontAttributeName:[UIFont fontWithName:@"mplus-1c-regular" size:21]}];
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]}];

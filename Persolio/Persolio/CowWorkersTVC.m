@@ -17,6 +17,7 @@
 
 
 - (void)prepare {
+    self.imageV.layer.cornerRadius = 5;
     if (_str_ok1(_dic[@"title"])) {
         self.titleLb.text = _dic[@"title"];
     }

@@ -11,7 +11,7 @@
 @interface TestCVC : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *testImgV;
 @property (weak, nonatomic) IBOutlet UILabel *titleLb;
-@property (weak, nonatomic) IBOutlet UITextView *descTV;
+@property (weak, nonatomic) IBOutlet UILabel *descTV;
 
 
 - (void)prepareWithDic:(NSMutableDictionary*)dic;

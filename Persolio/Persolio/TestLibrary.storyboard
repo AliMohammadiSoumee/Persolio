@@ -9,11 +9,6 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="FontAwesome.otf">
-            <string>FontAwesome</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Test LibraryVC-->
         <scene sceneID="Szd-UO-B01">
@@ -65,7 +60,7 @@
                                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePd-n4-w3F">
                                                                     <rect key="frame" x="15" y="10" width="245" height="77.5"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سلام من علی هستم" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pif-bX-oZ5">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pif-bX-oZ5">
                                                                             <rect key="frame" x="0.0" y="0.0" width="245" height="25"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <constraints>
@@ -75,21 +70,21 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="سلام من علی محمدی هستم" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="43X-p0-DP4">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-zc-lhZ">
                                                                             <rect key="frame" x="0.0" y="25" width="245" height="52.5"/>
-                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                            <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="12"/>
-                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                                        </textView>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <constraints>
-                                                                        <constraint firstItem="43X-p0-DP4" firstAttribute="leading" secondItem="ePd-n4-w3F" secondAttribute="leading" id="AhI-Nk-BUU"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="uGg-zc-lhZ" secondAttribute="trailing" id="1L7-Zb-Mxx"/>
                                                                         <constraint firstItem="Pif-bX-oZ5" firstAttribute="leading" secondItem="ePd-n4-w3F" secondAttribute="leading" id="AwK-aR-9BD"/>
                                                                         <constraint firstItem="Pif-bX-oZ5" firstAttribute="top" secondItem="ePd-n4-w3F" secondAttribute="top" id="DLH-NP-wm9"/>
-                                                                        <constraint firstItem="43X-p0-DP4" firstAttribute="top" secondItem="Pif-bX-oZ5" secondAttribute="bottom" id="GbU-aA-RjG"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="43X-p0-DP4" secondAttribute="bottom" id="JJ4-R1-giZ"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="43X-p0-DP4" secondAttribute="trailing" id="ed8-fI-Kj8"/>
+                                                                        <constraint firstItem="uGg-zc-lhZ" firstAttribute="leading" secondItem="ePd-n4-w3F" secondAttribute="leading" id="N3n-TY-sga"/>
+                                                                        <constraint firstItem="uGg-zc-lhZ" firstAttribute="top" secondItem="Pif-bX-oZ5" secondAttribute="bottom" id="PXA-aJ-nA0"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="uGg-zc-lhZ" secondAttribute="bottom" id="brF-u4-z0e"/>
                                                                         <constraint firstAttribute="trailing" secondItem="Pif-bX-oZ5" secondAttribute="trailing" id="hxZ-i7-KMf"/>
                                                                     </constraints>
                                                                 </view>
@@ -128,7 +123,7 @@
                                             <constraint firstAttribute="bottom" secondItem="7gn-we-h9m" secondAttribute="bottom" id="xOw-zP-dOs"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="descTV" destination="43X-p0-DP4" id="Qrk-Jd-dms"/>
+                                            <outlet property="descTV" destination="uGg-zc-lhZ" id="kty-Gf-OGv"/>
                                             <outlet property="testImgV" destination="4i6-bP-7Kn" id="3xg-Bg-wTD"/>
                                             <outlet property="titleLb" destination="Pif-bX-oZ5" id="fRw-au-xdB"/>
                                         </connections>
@@ -162,7 +157,7 @@
             <objects>
                 <navigationController storyboardIdentifier="TestLibraryNavC" automaticallyAdjustsScrollViewInsets="NO" id="KbF-2n-Ehx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NYK-Oc-LrC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="NYK-Oc-LrC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

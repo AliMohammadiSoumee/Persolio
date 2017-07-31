@@ -11,5 +11,6 @@
 @interface CowWorkersSlideShowTVC : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *contentV;
 
+- (void)prepareWith:(CGFloat)width;
 
 @end

@@ -9,6 +9,7 @@
 #import "CowWorkersVC.h"
 #import "CowWorkersTVC.h"
 #import "CowWorkersSlideShowTVC.h"
+#import "CowWorkerDetailsVC.h"
 
 @interface CowWorkersVC () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -58,6 +59,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         CowWorkersSlideShowTVC *cell = [tableView dequeueReusableCellWithIdentifier:@"CowWorkersSlideShowTVC"];
+        [cell prepareWith:self.view.bounds.size.width];
         return cell;
     }
     else {
@@ -75,10 +77,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0)
-        return 165;
+        return 200;
     else
         return 240;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CowWorkerDetailsVC *cowWorker = _vc_from_storyboard(@"CowWorkers", @"CowWorkerDetailsVC");
+    [self.navigationController pushViewController:cowWorker animated:YES];
+}
 @end
