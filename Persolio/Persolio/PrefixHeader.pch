@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  Persolio
+//
+//  Created by Ali Soume`e on 5/3/1396 AP.
+//  Copyright © 1396 Ali Soume`e. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "Codebase_definitions.h"
+#import "UIView+SDCAutoLayout.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

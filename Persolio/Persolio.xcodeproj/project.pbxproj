@@ -9,23 +9,78 @@
 /* Begin PBXBuildFile section */
 		A30587991F268F4B00E6253F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A30587981F268F4B00E6253F /* main.m */; };
 		A305879C1F268F4B00E6253F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A305879B1F268F4B00E6253F /* AppDelegate.m */; };
-		A305879F1F268F4B00E6253F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A305879E1F268F4B00E6253F /* ViewController.m */; };
 		A30587A21F268F4B00E6253F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30587A01F268F4B00E6253F /* Main.storyboard */; };
 		A30587A41F268F4B00E6253F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30587A31F268F4B00E6253F /* Assets.xcassets */; };
 		A30587A71F268F4B00E6253F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30587A51F268F4B00E6253F /* LaunchScreen.storyboard */; };
+		A30587B01F2690D000E6253F /* MainTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = A30587AF1F2690D000E6253F /* MainTBC.m */; };
+		A320D03A1F2F79AE00607C01 /* outSlide2.png in Resources */ = {isa = PBXBuildFile; fileRef = A320D0371F2F79AE00607C01 /* outSlide2.png */; };
+		A320D03B1F2F79AE00607C01 /* outSlide1.png in Resources */ = {isa = PBXBuildFile; fileRef = A320D0381F2F79AE00607C01 /* outSlide1.png */; };
+		A320D03C1F2F79AE00607C01 /* outSlide0.png in Resources */ = {isa = PBXBuildFile; fileRef = A320D0391F2F79AE00607C01 /* outSlide0.png */; };
+		A320D03F1F2F7C7800607C01 /* CowWorkers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A320D03E1F2F7C7800607C01 /* CowWorkers.storyboard */; };
+		A320D0421F2F7C9A00607C01 /* CowWorkersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A320D0411F2F7C9A00607C01 /* CowWorkersVC.m */; };
+		A320D0451F2F7EAE00607C01 /* CowWorkersSlideShowTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A320D0441F2F7EAE00607C01 /* CowWorkersSlideShowTVC.m */; };
+		A320D04B1F2F7F1E00607C01 /* CowWorkersTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A320D04A1F2F7F1E00607C01 /* CowWorkersTVC.m */; };
+		A320D0501F2F897F00607C01 /* out1.png in Resources */ = {isa = PBXBuildFile; fileRef = A320D04C1F2F897F00607C01 /* out1.png */; };
+		A320D0511F2F897F00607C01 /* out3.png in Resources */ = {isa = PBXBuildFile; fileRef = A320D04D1F2F897F00607C01 /* out3.png */; };
+		A320D0521F2F897F00607C01 /* out0.png in Resources */ = {isa = PBXBuildFile; fileRef = A320D04E1F2F897F00607C01 /* out0.png */; };
+		A320D0531F2F897F00607C01 /* out2.png in Resources */ = {isa = PBXBuildFile; fileRef = A320D04F1F2F897F00607C01 /* out2.png */; };
+		A346C6A51F274BCF00FA233F /* TestLibraryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A346C6A41F274BCF00FA233F /* TestLibraryVC.m */; };
+		A346C6A81F274BEF00FA233F /* TestLibrary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A346C6A71F274BEF00FA233F /* TestLibrary.storyboard */; };
+		A346C6AB1F274CD900FA233F /* TestCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A346C6AA1F274CD900FA233F /* TestCVC.m */; };
+		A346C6AE1F274D5500FA233F /* BorderImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A346C6AD1F274D5500FA233F /* BorderImage.png */; };
+		A346C6B01F274E2700FA233F /* BackgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A346C6AF1F274E2700FA233F /* BackgroundImage.png */; };
+		A346C6B51F27501900FA233F /* Test1.png in Resources */ = {isa = PBXBuildFile; fileRef = A346C6B11F27501900FA233F /* Test1.png */; };
+		A346C6B61F27501900FA233F /* Test2.png in Resources */ = {isa = PBXBuildFile; fileRef = A346C6B21F27501900FA233F /* Test2.png */; };
+		A346C6B71F27501900FA233F /* Test3.png in Resources */ = {isa = PBXBuildFile; fileRef = A346C6B31F27501900FA233F /* Test3.png */; };
+		A346C6B81F27501900FA233F /* Test4.png in Resources */ = {isa = PBXBuildFile; fileRef = A346C6B41F27501900FA233F /* Test4.png */; };
+		A346C6BB1F2762D800FA233F /* TestCVL.m in Sources */ = {isa = PBXBuildFile; fileRef = A346C6BA1F2762D800FA233F /* TestCVL.m */; };
+		A346C6BE1F276E3400FA233F /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = A346C6BD1F276E3400FA233F /* FontAwesome.otf */; };
+		B3CF79349110353F337B270C /* libPods-Persolio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3FF1290334EFA60B9C70CA /* libPods-Persolio.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02E25CAD7C756FC2A919518D /* Pods-Persolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Persolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Persolio/Pods-Persolio.debug.xcconfig"; sourceTree = "<group>"; };
+		547B4E9C82696FFAF3AE6892 /* Pods-Persolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Persolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Persolio/Pods-Persolio.release.xcconfig"; sourceTree = "<group>"; };
+		6D3FF1290334EFA60B9C70CA /* libPods-Persolio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Persolio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30587941F268F4B00E6253F /* Persolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Persolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30587981F268F4B00E6253F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A305879A1F268F4B00E6253F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A305879B1F268F4B00E6253F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A305879D1F268F4B00E6253F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A305879E1F268F4B00E6253F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A30587A11F268F4B00E6253F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A30587A31F268F4B00E6253F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A30587A61F268F4B00E6253F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A30587A81F268F4B00E6253F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A30587AE1F2690D000E6253F /* MainTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTBC.h; sourceTree = "<group>"; };
+		A30587AF1F2690D000E6253F /* MainTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTBC.m; sourceTree = "<group>"; };
+		A320D0371F2F79AE00607C01 /* outSlide2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outSlide2.png; sourceTree = "<group>"; };
+		A320D0381F2F79AE00607C01 /* outSlide1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outSlide1.png; sourceTree = "<group>"; };
+		A320D0391F2F79AE00607C01 /* outSlide0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outSlide0.png; sourceTree = "<group>"; };
+		A320D03E1F2F7C7800607C01 /* CowWorkers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CowWorkers.storyboard; sourceTree = "<group>"; };
+		A320D0401F2F7C9A00607C01 /* CowWorkersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CowWorkersVC.h; sourceTree = "<group>"; };
+		A320D0411F2F7C9A00607C01 /* CowWorkersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CowWorkersVC.m; sourceTree = "<group>"; };
+		A320D0431F2F7EAE00607C01 /* CowWorkersSlideShowTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CowWorkersSlideShowTVC.h; sourceTree = "<group>"; };
+		A320D0441F2F7EAE00607C01 /* CowWorkersSlideShowTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CowWorkersSlideShowTVC.m; sourceTree = "<group>"; };
+		A320D0491F2F7F1E00607C01 /* CowWorkersTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CowWorkersTVC.h; sourceTree = "<group>"; };
+		A320D04A1F2F7F1E00607C01 /* CowWorkersTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CowWorkersTVC.m; sourceTree = "<group>"; };
+		A320D04C1F2F897F00607C01 /* out1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = out1.png; sourceTree = "<group>"; };
+		A320D04D1F2F897F00607C01 /* out3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = out3.png; sourceTree = "<group>"; };
+		A320D04E1F2F897F00607C01 /* out0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = out0.png; sourceTree = "<group>"; };
+		A320D04F1F2F897F00607C01 /* out2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = out2.png; sourceTree = "<group>"; };
+		A346C6A21F27492200FA233F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A346C6A31F274BCF00FA233F /* TestLibraryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLibraryVC.h; sourceTree = "<group>"; };
+		A346C6A41F274BCF00FA233F /* TestLibraryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLibraryVC.m; sourceTree = "<group>"; };
+		A346C6A71F274BEF00FA233F /* TestLibrary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TestLibrary.storyboard; sourceTree = "<group>"; };
+		A346C6A91F274CD900FA233F /* TestCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCVC.h; sourceTree = "<group>"; };
+		A346C6AA1F274CD900FA233F /* TestCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCVC.m; sourceTree = "<group>"; };
+		A346C6AD1F274D5500FA233F /* BorderImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BorderImage.png; sourceTree = "<group>"; };
+		A346C6AF1F274E2700FA233F /* BackgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundImage.png; sourceTree = "<group>"; };
+		A346C6B11F27501900FA233F /* Test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test1.png; sourceTree = "<group>"; };
+		A346C6B21F27501900FA233F /* Test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test2.png; sourceTree = "<group>"; };
+		A346C6B31F27501900FA233F /* Test3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test3.png; sourceTree = "<group>"; };
+		A346C6B41F27501900FA233F /* Test4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test4.png; sourceTree = "<group>"; };
+		A346C6B91F2762D800FA233F /* TestCVL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCVL.h; sourceTree = "<group>"; };
+		A346C6BA1F2762D800FA233F /* TestCVL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCVL.m; sourceTree = "<group>"; };
+		A346C6BD1F276E3400FA233F /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +88,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3CF79349110353F337B270C /* libPods-Persolio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3789766453FC13D6F7B07D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D3FF1290334EFA60B9C70CA /* libPods-Persolio.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BA39C716183A8251DD9FC7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02E25CAD7C756FC2A919518D /* Pods-Persolio.debug.xcconfig */,
+				547B4E9C82696FFAF3AE6892 /* Pods-Persolio.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A305878B1F268F4B00E6253F = {
 			isa = PBXGroup;
 			children = (
 				A30587961F268F4B00E6253F /* Persolio */,
 				A30587951F268F4B00E6253F /* Products */,
+				7BA39C716183A8251DD9FC7E /* Pods */,
+				0F3789766453FC13D6F7B07D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,12 +135,14 @@
 			children = (
 				A305879A1F268F4B00E6253F /* AppDelegate.h */,
 				A305879B1F268F4B00E6253F /* AppDelegate.m */,
-				A305879D1F268F4B00E6253F /* ViewController.h */,
-				A305879E1F268F4B00E6253F /* ViewController.m */,
+				A30587AE1F2690D000E6253F /* MainTBC.h */,
+				A30587AF1F2690D000E6253F /* MainTBC.m */,
 				A30587A01F268F4B00E6253F /* Main.storyboard */,
-				A30587A31F268F4B00E6253F /* Assets.xcassets */,
-				A30587A51F268F4B00E6253F /* LaunchScreen.storyboard */,
-				A30587A81F268F4B00E6253F /* Info.plist */,
+				A346C6A61F274BD700FA233F /* TestLibrary */,
+				A320D03D1F2F7C3600607C01 /* CowWorkers */,
+				A346C6A21F27492200FA233F /* PrefixHeader.pch */,
+				A346C6BF1F276E3800FA233F /* Fonts */,
+				A346C6AC1F274D4500FA233F /* Pictures */,
 				A30587971F268F4B00E6253F /* Supporting Files */,
 			);
 			path = Persolio;
@@ -74,9 +151,68 @@
 		A30587971F268F4B00E6253F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A30587A51F268F4B00E6253F /* LaunchScreen.storyboard */,
+				A30587A81F268F4B00E6253F /* Info.plist */,
 				A30587981F268F4B00E6253F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A320D03D1F2F7C3600607C01 /* CowWorkers */ = {
+			isa = PBXGroup;
+			children = (
+				A320D0401F2F7C9A00607C01 /* CowWorkersVC.h */,
+				A320D0411F2F7C9A00607C01 /* CowWorkersVC.m */,
+				A320D0431F2F7EAE00607C01 /* CowWorkersSlideShowTVC.h */,
+				A320D0441F2F7EAE00607C01 /* CowWorkersSlideShowTVC.m */,
+				A320D0491F2F7F1E00607C01 /* CowWorkersTVC.h */,
+				A320D04A1F2F7F1E00607C01 /* CowWorkersTVC.m */,
+				A320D03E1F2F7C7800607C01 /* CowWorkers.storyboard */,
+			);
+			name = CowWorkers;
+			sourceTree = "<group>";
+		};
+		A346C6A61F274BD700FA233F /* TestLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				A346C6A31F274BCF00FA233F /* TestLibraryVC.h */,
+				A346C6A41F274BCF00FA233F /* TestLibraryVC.m */,
+				A346C6A91F274CD900FA233F /* TestCVC.h */,
+				A346C6AA1F274CD900FA233F /* TestCVC.m */,
+				A346C6B91F2762D800FA233F /* TestCVL.h */,
+				A346C6BA1F2762D800FA233F /* TestCVL.m */,
+				A346C6A71F274BEF00FA233F /* TestLibrary.storyboard */,
+			);
+			name = TestLibrary;
+			sourceTree = "<group>";
+		};
+		A346C6AC1F274D4500FA233F /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				A30587A31F268F4B00E6253F /* Assets.xcassets */,
+				A346C6AF1F274E2700FA233F /* BackgroundImage.png */,
+				A346C6AD1F274D5500FA233F /* BorderImage.png */,
+				A346C6B11F27501900FA233F /* Test1.png */,
+				A346C6B21F27501900FA233F /* Test2.png */,
+				A346C6B31F27501900FA233F /* Test3.png */,
+				A346C6B41F27501900FA233F /* Test4.png */,
+				A320D0371F2F79AE00607C01 /* outSlide2.png */,
+				A320D0381F2F79AE00607C01 /* outSlide1.png */,
+				A320D0391F2F79AE00607C01 /* outSlide0.png */,
+				A320D04C1F2F897F00607C01 /* out1.png */,
+				A320D04D1F2F897F00607C01 /* out3.png */,
+				A320D04E1F2F897F00607C01 /* out0.png */,
+				A320D04F1F2F897F00607C01 /* out2.png */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
+		A346C6BF1F276E3800FA233F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A346C6BD1F276E3400FA233F /* FontAwesome.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A30587AB1F268F4B00E6253F /* Build configuration list for PBXNativeTarget "Persolio" */;
 			buildPhases = (
+				9B325480837262CD5B6BF02B /* [CP] Check Pods Manifest.lock */,
 				A30587901F268F4B00E6253F /* Sources */,
 				A30587911F268F4B00E6253F /* Frameworks */,
 				A30587921F268F4B00E6253F /* Resources */,
+				756E56F465A9CE46AD2955FB /* [CP] Embed Pods Frameworks */,
+				3B10200F677DDFB68B350160 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,22 +277,92 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A320D0511F2F897F00607C01 /* out3.png in Resources */,
 				A30587A71F268F4B00E6253F /* LaunchScreen.storyboard in Resources */,
+				A320D03C1F2F79AE00607C01 /* outSlide0.png in Resources */,
+				A346C6BE1F276E3400FA233F /* FontAwesome.otf in Resources */,
+				A320D03B1F2F79AE00607C01 /* outSlide1.png in Resources */,
+				A320D0501F2F897F00607C01 /* out1.png in Resources */,
+				A346C6B51F27501900FA233F /* Test1.png in Resources */,
 				A30587A41F268F4B00E6253F /* Assets.xcassets in Resources */,
+				A320D03F1F2F7C7800607C01 /* CowWorkers.storyboard in Resources */,
+				A346C6A81F274BEF00FA233F /* TestLibrary.storyboard in Resources */,
+				A346C6B81F27501900FA233F /* Test4.png in Resources */,
+				A320D0521F2F897F00607C01 /* out0.png in Resources */,
+				A320D0531F2F897F00607C01 /* out2.png in Resources */,
+				A320D03A1F2F79AE00607C01 /* outSlide2.png in Resources */,
+				A346C6AE1F274D5500FA233F /* BorderImage.png in Resources */,
 				A30587A21F268F4B00E6253F /* Main.storyboard in Resources */,
+				A346C6B71F27501900FA233F /* Test3.png in Resources */,
+				A346C6B61F27501900FA233F /* Test2.png in Resources */,
+				A346C6B01F274E2700FA233F /* BackgroundImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B10200F677DDFB68B350160 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Persolio/Pods-Persolio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		756E56F465A9CE46AD2955FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Persolio/Pods-Persolio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B325480837262CD5B6BF02B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A30587901F268F4B00E6253F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A305879F1F268F4B00E6253F /* ViewController.m in Sources */,
+				A346C6A51F274BCF00FA233F /* TestLibraryVC.m in Sources */,
 				A305879C1F268F4B00E6253F /* AppDelegate.m in Sources */,
+				A320D0421F2F7C9A00607C01 /* CowWorkersVC.m in Sources */,
+				A320D04B1F2F7F1E00607C01 /* CowWorkersTVC.m in Sources */,
+				A30587B01F2690D000E6253F /* MainTBC.m in Sources */,
+				A346C6BB1F2762D800FA233F /* TestCVL.m in Sources */,
+				A346C6AB1F274CD900FA233F /* TestCVC.m in Sources */,
 				A30587991F268F4B00E6253F /* main.m in Sources */,
+				A320D0451F2F7EAE00607C01 /* CowWorkersSlideShowTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +482,11 @@
 		};
 		A30587AC1F268F4B00E6253F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02E25CAD7C756FC2A919518D /* Pods-Persolio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4486G5N4E6;
+				GCC_PREFIX_HEADER = /Users/AliSoume/Developer/github/Persolio/Persolio/Persolio/PrefixHeader.pch;
 				INFOPLIST_FILE = Persolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ali-Soume-e.Persolio";
@@ -285,9 +496,11 @@
 		};
 		A30587AD1F268F4B00E6253F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 547B4E9C82696FFAF3AE6892 /* Pods-Persolio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4486G5N4E6;
+				GCC_PREFIX_HEADER = /Users/AliSoume/Developer/github/Persolio/Persolio/Persolio/PrefixHeader.pch;
 				INFOPLIST_FILE = Persolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ali-Soume-e.Persolio";
@@ -314,6 +527,7 @@
 				A30587AD1F268F4B00E6253F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

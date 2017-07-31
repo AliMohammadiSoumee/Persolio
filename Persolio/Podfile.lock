@@ -1,0 +1,26 @@
+PODS:
+  - iOS-Codebase (1.1.16):
+    - PodAsset
+    - pop
+    - PPTopMostController
+    - sqlite3
+  - PodAsset (0.21.0)
+  - pop (1.0.10)
+  - PPTopMostController (0.0.1)
+  - sqlite3 (3.19.3):
+    - sqlite3/common (= 3.19.3)
+  - sqlite3/common (3.19.3)
+
+DEPENDENCIES:
+  - iOS-Codebase
+
+SPEC CHECKSUMS:
+  iOS-Codebase: 2be4341b7c1bceb591806942aa73c98c7d2f0df5
+  PodAsset: c3100695dacb7a47720d1607afb4298b89597984
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  PPTopMostController: 4e6f1e5f8c645bdcc74cd837a20f607ff262c048
+  sqlite3: e0f7755dc52e709215e116c801ea0c81fd45c083
+
+PODFILE CHECKSUM: 51f3c0e2dd638cf6442af64c2b66fc5bad13e767
+
+COCOAPODS: 1.1.1

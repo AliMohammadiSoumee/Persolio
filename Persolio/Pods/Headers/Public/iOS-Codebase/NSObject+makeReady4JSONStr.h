@@ -1,0 +1,1 @@
+../../../iOS-Codebase/iOS-Codebase/Classes/NSObject+makeReady4JSONStr.h
