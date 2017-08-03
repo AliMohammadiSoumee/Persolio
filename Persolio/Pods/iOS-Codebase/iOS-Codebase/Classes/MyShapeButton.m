@@ -42,6 +42,12 @@
 		self.backgroundColor = backColor;
 }
 
+-(void)setShapeMargins:(UIEdgeInsets)shapeMargins
+{
+	_shapeMargins = shapeMargins;
+	[self setNeedsLayout];
+}
+
 -(BOOL)MyShapeButtonLayerShouldOverrideSetCornerRadius
 {
 	return _setsCornerRadiusForShapeView;

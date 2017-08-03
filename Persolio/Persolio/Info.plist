@@ -44,6 +44,11 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>FontAwesome.otf</string>
+		<string>IRANSansMobile_Bold.ttf</string>
+		<string>IRANSansMobile_Light.ttf</string>
+		<string>IRANSansMobile_Medium.ttf</string>
+		<string>IRANSansMobile_Bold.UltraLight.ttf</string>
+		<string>IRANSansMobile.ttf</string>
 	</array>
 </dict>
 </plist>

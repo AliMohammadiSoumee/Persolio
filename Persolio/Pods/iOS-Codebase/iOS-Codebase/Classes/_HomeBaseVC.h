@@ -60,10 +60,21 @@
 
 
 /**
+ override this method if you want other visual effects.
+ default: [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]
+
+ @return the desired visual effect e.g. [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]
+ */
+-(UIVisualEffect*)effectForVisualEffectView;
+
+/**
  the color of the loading indicator. default: white
  */
 @property (retain, nonatomic) UIColor* loadingViewColor;
 
 -(void)hidePageLoadingAnimated:(BOOL)animated completion:(void(^)())completion;
 -(void)showPageLoadingAnimated:(BOOL)animated completion:(void(^)())completion;
+
+
++(void)setLoadingViewProviderBlock:(UIView* (^)(UIView* superview))loadingViewProviderBlock;
 @end

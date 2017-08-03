@@ -81,6 +81,11 @@
 	
 }
 
+-(UIVisualEffect*)effectForVisualEffectView
+{
+	return nil;
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
@@ -89,7 +94,10 @@
 	self.automaticallyAdjustsScrollViewInsets = NO;
 	self.view.backgroundColor = [UIColor whiteColor];
 	
-	_visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
+	UIVisualEffect* effect = [self effectForVisualEffectView];
+	if (!effect)
+		effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+	_visualEffectView = [[UIVisualEffectView alloc] initWithEffect:effect];
 	_visualEffectView.translatesAutoresizingMaskIntoConstraints = NO;
 	_HomeBaseVC_View* v = (_HomeBaseVC_View*)self.view;
 	[v _addSubview:_visualEffectView];
@@ -116,6 +124,12 @@
 
 - (void)deviceOrientationDidChange:(NSNotification *)notification {
 	//	[self updateNavBarBackDropView:YES];
+}
+
+static UIView* (^loadingViewProviderBlock)(UIView* superview);
++(void)setLoadingViewProviderBlock:(UIView* (^)(UIView* superview))_loadingViewProviderBlock;
+{
+	loadingViewProviderBlock = _loadingViewProviderBlock;
 }
 
 -(void)showPageLoadingAnimated:(BOOL)animated completion:(void(^)())completion
@@ -146,14 +160,22 @@
 			[gradView sdc_pinHeight:_loadingGradientHeight ? [_loadingGradientHeight floatValue] : 80];
 		}
 		
-		myLoadingView* loading = [[myLoadingView alloc] initWithFrame:CGRectMake(0, 0, 37, 37)];
-		if (_loadingViewColor)
-			loading.color = _loadingViewColor;
-		[loading startAnimating];
-		[loading setTranslatesAutoresizingMaskIntoConstraints:NO];
-		[loadingView addSubview:loading];
-		[loading sdc_centerInSuperview];
-		[loading sdc_pinSize:CGSizeMake(37, 37)];
+		if (loadingViewProviderBlock)
+		{
+			loadingViewProviderBlock(loadingView);
+		}
+		else
+			
+		{
+			myLoadingView* loading = [[myLoadingView alloc] initWithFrame:CGRectMake(0, 0, 37, 37)];
+			if (_loadingViewColor)
+				loading.color = _loadingViewColor;
+			[loading startAnimating];
+			[loading setTranslatesAutoresizingMaskIntoConstraints:NO];
+			[loadingView addSubview:loading];
+			[loading sdc_centerInSuperview];
+			[loading sdc_pinSize:CGSizeMake(37, 37)];
+		}
 	}
 	
 	if (animated)

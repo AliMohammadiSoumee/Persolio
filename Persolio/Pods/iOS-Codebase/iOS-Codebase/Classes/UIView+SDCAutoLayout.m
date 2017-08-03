@@ -7,6 +7,7 @@
 //
 
 #import "UIView+SDCAutoLayout.h"
+#import "NSLayoutConstraint+Extensions.h"
 
 CGFloat const SDCAutoLayoutStandardSiblingDistance = 8;
 CGFloat const SDCAutoLayoutStandardParentChildDistance = 20;
@@ -469,6 +470,103 @@ static UILayoutPriority priority = UILayoutPriorityRequired;
 	for (UIView* aView in self.subviews) {
 		[aView removeFromSuperview];
 	}
+}
+
+
+-(NSLayoutConstraint*)sdc_get_verticalCenter
+{
+	for (NSLayoutConstraint* con in self.superview.constraints)
+	{
+		if ([con matchesAnItem:self withSomeAttribute:NSLayoutAttributeCenterY anotherItem:nil withSomeAttribute:NSLayoutAttributeCenterY])
+			return con;
+	}
+	return nil;
+}
+
+-(NSLayoutConstraint*)sdc_get_top
+{
+	for (NSLayoutConstraint* con in self.superview.constraints)
+	{
+		if ([con matchesAnItem:self withSomeAttribute:NSLayoutAttributeTop anotherItem:nil withSomeAttribute:-1])
+			return con;
+	}
+	return nil;
+}
+
+-(NSLayoutConstraint*)sdc_get_leading
+{
+	for (NSLayoutConstraint* con in self.superview.constraints)
+	{
+		if ([con matchesAnItem:self withSomeAttribute:NSLayoutAttributeLeading anotherItem:nil withSomeAttribute:-1])
+			return con;
+	}
+	return nil;
+}
+
+-(NSLayoutConstraint*)sdc_get_trailing
+{
+	for (NSLayoutConstraint* con in self.superview.constraints)
+	{
+		if ([con matchesAnItem:self withSomeAttribute:NSLayoutAttributeTrailing anotherItem:nil withSomeAttribute:-1])
+			return con;
+	}
+	return nil;
+}
+
+-(NSLayoutConstraint*)sdc_get_leadingOrLeft
+{
+	for (NSLayoutConstraint* con in self.superview.constraints)
+	{
+		if ([con matchesAnItem:self withSomeAttribute:NSLayoutAttributeLeading anotherItem:nil withSomeAttribute:-1])
+			return con;
+		
+		if ([con matchesAnItem:self withSomeAttribute:NSLayoutAttributeLeft anotherItem:nil withSomeAttribute:-1])
+			return con;
+	}
+	return nil;
+}
+
+-(NSLayoutConstraint*)sdc_get_trailingOrRight
+{
+	for (NSLayoutConstraint* con in self.superview.constraints)
+	{
+		if ([con matchesAnItem:self withSomeAttribute:NSLayoutAttributeTrailing anotherItem:nil withSomeAttribute:-1])
+			return con;
+		
+		if ([con matchesAnItem:self withSomeAttribute:NSLayoutAttributeRight anotherItem:nil withSomeAttribute:-1])
+			return con;
+	}
+	return nil;
+}
+
+-(NSLayoutConstraint*)sdc_get_bottom
+{
+	for (NSLayoutConstraint* con in self.superview.constraints)
+	{
+		if ([con matchesAnItem:self withSomeAttribute:NSLayoutAttributeBottom anotherItem:nil withSomeAttribute:-1])
+			return con;
+	}
+	return nil;
+}
+
+-(NSLayoutConstraint*)sdc_get_height
+{
+	for (NSLayoutConstraint* con in self.constraints)
+	{
+		if ([con matchesAnItem:self withSomeAttribute:NSLayoutAttributeHeight anotherItem:nil withSomeAttribute:-1])
+			return con;
+	}
+	return nil;
+}
+
+-(NSLayoutConstraint*)sdc_get_width
+{
+	for (NSLayoutConstraint* con in self.constraints)
+	{
+		if ([con matchesAnItem:self withSomeAttribute:NSLayoutAttributeHeight anotherItem:nil withSomeAttribute:-1])
+			return con;
+	}
+	return nil;
 }
 
 @end

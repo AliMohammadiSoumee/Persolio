@@ -10,6 +10,7 @@
 
 @interface _viewBase : UIView
 
+-(instancetype)_init;
 -(void)initialize;
 -(void)configureWithDictionary:(NSMutableDictionary*)dic;
 

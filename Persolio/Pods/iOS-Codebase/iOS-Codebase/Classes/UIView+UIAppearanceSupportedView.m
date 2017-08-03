@@ -9,7 +9,7 @@
 #import "UIView+UIAppearanceSupportedView.h"
 #import "NSObject+Runtime.h"
 
-@implementation  UIView (pp)
+@implementation  UIView (UIAppearanceSupportedView)
 
 +(instancetype)_appearance
 {

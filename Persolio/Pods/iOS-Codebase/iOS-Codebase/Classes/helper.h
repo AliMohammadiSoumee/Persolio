@@ -65,8 +65,11 @@ static inline void _backThreadBackground(dispatch_block_t block)
 +(UIBarButtonItem*)shapeBarButtonWithConf:(void (^)(MyShapeButton* button))buttonConfCallback andCallback:(void (^)(void))buttonClick;
 
 +(UIBezierPath*)bezierPathWithDescArray:(NSArray*)array andWidth:(CGFloat)w;
++(UIBezierPath*)bezierPathWithDescArray:(NSArray*)array andWidth:(CGFloat)w closePath:(bool)closePath;
 
-+(void)prepareLocalizableStrings;
+//+(void)prepareLocalizableStrings;
++(void)setLang:(NSString*)key;
++(NSString*)getLang;
 +(NSString*)localizableValueWithKey:(NSString*)key;
 
 //+(id)loadPrefWithKey:(NSString*)key;
@@ -114,5 +117,8 @@ static inline void _backThreadBackground(dispatch_block_t block)
 +(void)hapticNotificationError;
 +(void)makeSqliteThreadSafeIfNeeded;
 
+
++(UIView*)horizontalHairlineWithColor:(UIColor*)color;
++(UIView*)verticalHairlineWithColor:(UIColor*)color;
 
 @end

@@ -16,4 +16,9 @@
 @property (retain, nonatomic) NSMutableDictionary *layoutAttributes;
 @property (assign, nonatomic) CGSize contentSize;
 
+-(void)initialize;
+-(NSMutableDictionary*)dicForLayoutAttributes;
+-(NSMutableArray*)elementsInRectArray;
+-(id)attributesForItem:(NSInteger)item inSection:(NSInteger)section class:(Class)class;
+-(id)attributesForItem:(NSInteger)item inSection:(NSInteger)section;
 @end

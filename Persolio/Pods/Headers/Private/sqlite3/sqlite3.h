@@ -1,1 +1,1 @@
-../../../sqlite3/sqlite-amalgamation-3190300/sqlite3.h
+../../../sqlite3/sqlite-amalgamation-3200000/sqlite3.h

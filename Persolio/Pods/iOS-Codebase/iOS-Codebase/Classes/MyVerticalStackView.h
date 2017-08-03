@@ -38,11 +38,13 @@ typedef enum : NSUInteger {
 -(void)addArrangedSubview:(UIView *)subview margins:(UIEdgeInsets)margins animated:(BOOL)animated;
 -(void)addArrangedSubview:(UIView *)subview margins:(UIEdgeInsets)margins;
 -(void)addArrangedSubview:(UIView *)subview;
+-(void)addArrangedSubview:(UIView *)subview initiallyHidden:(BOOL)hidden;
 -(void)hideArrangedSubview:(UIView*)view animated:(BOOL)animated;
 -(void)showArrangedSubview:(UIView*)view animated:(BOOL)animated;
 -(void)hideArrangedSubview:(UIView*)view animated:(BOOL)animated completion:(void(^)())callback;
 -(void)showArrangedSubview:(UIView*)view animated:(BOOL)animated completion:(void(^)())callback;
 -(BOOL)arrangedViewIsHidden:(UIView*)view;
+-(BOOL)hasArrangedSubview:(UIView*)aView;
 
 /**
  In order to get a nice sliding animation when showing or hiding an arrangedview, MyVerticalStackView will execute layoutIfNeeded on this view. otherwise it will perform it on nearest uiviewcontroller's view.

@@ -9,11 +9,19 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile_Light.ttf">
+            <string>IRANSansMobile-Light</string>
+        </array>
+        <array key="IRANSansMobile_Medium.ttf">
+            <string>IRANSansMobile-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Cow WorkersVC-->
+        <!--Co Workers-->
         <scene sceneID="Ogk-ZE-wCH">
             <objects>
-                <viewController storyboardIdentifier="CowWorkersVC" id="tAi-xJ-hux" customClass="CowWorkersVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoWorkersVC" id="tAi-xJ-hux" customClass="CoWorkers" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YRf-SC-FPX"/>
                         <viewControllerLayoutGuide type="bottom" id="Hej-Dd-i6D"/>
@@ -30,7 +38,7 @@
                                 <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CowWorkersSlideShowTVC" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="CowWorkersSlideShowTVC" rowHeight="165" id="XkV-N1-dSN" userLabel="SlideShow" customClass="CowWorkersSlideShowTVC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CoWorkersSlideShowTVC" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="CoWorkersSlideShowTVC" rowHeight="165" id="XkV-N1-dSN" userLabel="SlideShow" customClass="CoWorkersSlideShowTVC">
                                         <rect key="frame" x="0.0" y="28" width="375" height="165"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XkV-N1-dSN" id="BKt-RJ-qdd">
@@ -70,7 +78,7 @@
                                             <outlet property="contentV" destination="fp9-bm-mhb" id="Hgj-mQ-kUV"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="CowWorkersTVC" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="CowWorkersTVC" rowHeight="250" id="s8F-ou-MuG" customClass="CowWorkersTVC">
+                                    <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="CoWorkersTVC" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="CoWorkersTVC" rowHeight="250" id="s8F-ou-MuG" customClass="CoWorkersTVC">
                                         <rect key="frame" x="0.0" y="193" width="375" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="s8F-ou-MuG" id="vmQ-nN-rEA">
@@ -81,13 +89,13 @@
                                                     <rect key="frame" x="15" y="15" width="345" height="219.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWS-gF-Ccd">
-                                                            <rect key="frame" x="276.5" y="0.0" width="58.5" height="29"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <rect key="frame" x="276.5" y="0.0" width="58.5" height="36.5"/>
+                                                            <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="23"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="513-vI-otz">
-                                                            <rect key="frame" x="0.0" y="49" width="345" height="120"/>
+                                                            <rect key="frame" x="0.0" y="56.5" width="345" height="120"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <gestureRecognizers/>
                                                             <constraints>
@@ -95,9 +103,9 @@
                                                             </constraints>
                                                         </imageView>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="F8C-bc-fio">
-                                                            <rect key="frame" x="0.0" y="179" width="335" height="40.5"/>
+                                                            <rect key="frame" x="0.0" y="186.5" width="335" height="33"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="12"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                     </subviews>
@@ -156,29 +164,29 @@
             </objects>
             <point key="canvasLocation" x="1831.2" y="-3.1484257871064472"/>
         </scene>
-        <!--Cow Worker DetailsVC-->
+        <!--Co Worker DetailsVC-->
         <scene sceneID="5fJ-6t-R7s">
             <objects>
-                <viewController storyboardIdentifier="CowWorkerDetailsVC" id="MZ8-Hv-zBY" customClass="CowWorkerDetailsVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoWorkerDetailsVC" id="MZ8-Hv-zBY" customClass="CoWorkerDetailsVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WSa-Rf-3HF"/>
                         <viewControllerLayoutGuide type="bottom" id="153-2v-zEf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dE1-Jg-VYp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="H8P-N6-rz4">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1380"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1980"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGa-xf-msC">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1380"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLY-jJ-Zid">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1272"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1455.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q5-jE-jnU">
-                                                <rect key="frame" x="10" y="10" width="355" height="1252"/>
+                                                <rect key="frame" x="10" y="10" width="355" height="1435.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Karbin.png" translatesAutoresizingMaskIntoConstraints="NO" id="hEK-St-T5X">
                                                         <rect key="frame" x="225" y="10" width="120" height="120"/>
@@ -193,18 +201,18 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کاربین" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17n-XR-Uik">
-                                                        <rect key="frame" x="150.5" y="10" width="54.5" height="29"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <rect key="frame" x="147" y="10" width="58" height="38.5"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="ما به شما کمک میکنیم تا کارهای خوبی پیدا کنید" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="0d6-eS-Ywi">
-                                                        <rect key="frame" x="0.0" y="49" width="205" height="50"/>
+                                                        <rect key="frame" x="0.0" y="58.5" width="205" height="50"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="egw-zC-T2m"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FtD-UY-zYw">
@@ -226,13 +234,13 @@
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نظرات" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCe-9X-WHf">
                                                                 <rect key="frame" x="10" y="0.0" width="79" height="25"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مشخصات" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXt-21-UnM">
+                                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مشخصات" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXt-21-UnM">
                                                                 <rect key="frame" x="109.5" y="0.0" width="80.5" height="25"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -266,105 +274,105 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حوزه فعالیت:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAL-wH-rcX">
-                                                        <rect key="frame" x="275" y="246" width="70" height="17"/>
+                                                        <rect key="frame" x="270" y="246" width="75" height="22.5"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="Zc4-Kj-ThB"/>
+                                                            <constraint firstAttribute="width" constant="75" id="Zc4-Kj-ThB"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="توضیحات:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfy-6V-eVw">
-                                                        <rect key="frame" x="275" y="366.5" width="70" height="17"/>
+                                                        <rect key="frame" x="275" y="422" width="70" height="22.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="qod-Cn-Tf6"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سابقه:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2g-Pv-aPD">
-                                                        <rect key="frame" x="275" y="453.5" width="70" height="17"/>
+                                                        <rect key="frame" x="275" y="531" width="70" height="22.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="Iml-4p-yzz"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="افتخارات:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORg-z8-0yC">
-                                                        <rect key="frame" x="275" y="507" width="70" height="17"/>
+                                                        <rect key="frame" x="275" y="618" width="70" height="22.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="AIb-Ok-dNb"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="محصولات:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vt-FH-aXv">
-                                                        <rect key="frame" x="275" y="597.5" width="70" height="17"/>
+                                                        <rect key="frame" x="275" y="725" width="70" height="22.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="Nzl-SZ-KxT"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تماس با ما:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gv-Db-0uq">
-                                                        <rect key="frame" x="275" y="972" width="90" height="17"/>
+                                                        <rect key="frame" x="275" y="1143.5" width="90" height="22.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="90" id="8c1-jN-szh"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLj-Uv-Xuy">
-                                                        <rect key="frame" x="10" y="246" width="255" height="100.5"/>
-                                                        <mutableString key="text">با كاربين مي توانيد از آخرين فرصت هاي شغلي شركت هاي برتر ايراني و بين المللي آگاه شويد و براي آنها اقدام كنيد. با اين اپليكيشن كاربردي شما براي اولين بار مي توانيد به رايگان با گوشي همراه خود به موقعيت هاي كاري متنوع دسترسي داشته باشيد و با معرفي كامل خود، به محل كار جديدتان برسيد!</mutableString>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <rect key="frame" x="10" y="246" width="250" height="156"/>
+                                                        <mutableString key="text">با كاربين مي توانيد از آخرين فرصت هاي شغلي شركت هاي برتر ايراني و بين المللي آگاه شويد و براي آنها اقدام كنيد. با اين اپليكيشن كاربردی شما براي اولين بار مي توانيد به رايگان با گوشي همراه خود به موقعيت هاي كاري متنوع دسترسي داشته باشيد و با معرفي كامل خود، به محل كار جديدتان برسيد!</mutableString>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQS-ZH-U0B">
-                                                        <rect key="frame" x="10" y="366.5" width="255" height="67"/>
+                                                        <rect key="frame" x="10" y="422" width="255" height="89"/>
                                                         <string key="text">ما در کاربین خود را متعهد به تسهیل ارتباط کارجویان و کارفرمایان می دانیم و شما را تا یافتن شغل مورد علاقه و مبتنی بر تخصصتان همراهی خواهیم کرد.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کاربین بطور هوشمند فرصت های مناسب با علاقه مندی ها و توانمندی های شما را پیشنهاد می دهد." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr2-NS-V77">
-                                                        <rect key="frame" x="10" y="453.5" width="255" height="33.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <rect key="frame" x="10" y="531" width="255" height="67"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شما این امکان را دارید که فرصت های مورد علاقه ی خود را نشان کنید تا در هنگام مناسب با تمرکز و آمادگی کامل برای آنها اقدام کنید." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9K-KK-1Kb">
-                                                        <rect key="frame" x="10" y="507" width="255" height="50.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <rect key="frame" x="10" y="618" width="255" height="67"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="با چارچوبی حرفه ای و مشخص، می توانید در ویدئو یا نامه ای کوتاه به کارفرما به معرفی بیشتر خود بپردازید." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnO-Qt-8uv">
-                                                        <rect key="frame" x="10" y="634.5" width="190" height="50.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <rect key="frame" x="10" y="767.5" width="188" height="89"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://www.mykarbin.com" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXY-fC-i9v">
-                                                        <rect key="frame" x="10" y="999" width="261" height="17"/>
+                                                        <rect key="frame" x="10" y="1176" width="253" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="support@mykarbin.com" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcu-H9-VaE">
-                                                        <rect key="frame" x="10" y="1025" width="261" height="17"/>
+                                                        <rect key="frame" x="10" y="1208.5" width="253" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Karbin.png" translatesAutoresizingMaskIntoConstraints="NO" id="IbE-Qm-ePO">
-                                                        <rect key="frame" x="275" y="634.5" width="36" height="36"/>
+                                                        <rect key="frame" x="275" y="767.5" width="36" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="36" id="Qev-Px-HhK"/>
                                                             <constraint firstAttribute="width" secondItem="IbE-Qm-ePO" secondAttribute="height" id="Y7O-L7-1qo"/>
@@ -379,34 +387,34 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اپ کاربین:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGj-S2-fu2">
-                                                        <rect key="frame" x="210" y="634.5" width="55" height="16"/>
+                                                        <rect key="frame" x="208" y="767.5" width="57" height="22.5"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="PFC-qO-aNb"/>
+                                                            <constraint firstAttribute="width" constant="57" id="PFC-qO-aNb"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سایت:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Aq-5C-Rdw">
-                                                        <rect key="frame" x="281" y="999" width="30" height="16"/>
+                                                        <rect key="frame" x="273" y="1176" width="38" height="22.5"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="30" id="hFw-Bj-fSJ"/>
+                                                            <constraint firstAttribute="width" constant="38" id="hFw-Bj-fSJ"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ایمیل:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyS-eE-A20">
-                                                        <rect key="frame" x="281" y="1025" width="30" height="16"/>
+                                                        <rect key="frame" x="273" y="1208.5" width="36" height="22.5"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="30" id="sKq-90-PIk"/>
+                                                            <constraint firstAttribute="width" constant="36" id="sKq-90-PIk"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ErW-nN-B2c">
-                                                        <rect key="frame" x="177" y="705" width="0.0" height="230"/>
+                                                        <rect key="frame" x="177" y="876.5" width="0.0" height="230"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" id="eef-GK-zgd"/>
@@ -414,7 +422,7 @@
                                                         </constraints>
                                                     </view>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KarbinApp1.png" translatesAutoresizingMaskIntoConstraints="NO" id="aWc-mZ-2hB">
-                                                        <rect key="frame" x="10" y="705" width="162" height="235"/>
+                                                        <rect key="frame" x="10" y="876.5" width="162" height="235"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="235" id="vZG-6G-J69"/>
                                                         </constraints>
@@ -425,7 +433,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KarbinApp2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jih-Cr-Ed6">
-                                                        <rect key="frame" x="182" y="705" width="163" height="235"/>
+                                                        <rect key="frame" x="182" y="876.5" width="163" height="235"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="235" id="mN6-np-oC3"/>
                                                         </constraints>
@@ -436,7 +444,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test4.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Xe-Om-nrv">
-                                                        <rect key="frame" x="10" y="1082" width="335" height="160"/>
+                                                        <rect key="frame" x="10" y="1265.5" width="335" height="160"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="160" id="7EG-6d-wDz"/>
                                                         </constraints>
@@ -550,7 +558,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3Xn-x3-gKc"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1400"/>
+                    <size key="freeformSize" width="375" height="2000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Res-vA-U6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -559,7 +567,7 @@
         <!--Navigation Controller-->
         <scene sceneID="2HX-fl-Cc0">
             <objects>
-                <navigationController storyboardIdentifier="CowWorkersNavC" automaticallyAdjustsScrollViewInsets="NO" id="qNe-RO-OAS" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CoWorkersNavC" automaticallyAdjustsScrollViewInsets="NO" id="qNe-RO-OAS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Pnk-0E-oHR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

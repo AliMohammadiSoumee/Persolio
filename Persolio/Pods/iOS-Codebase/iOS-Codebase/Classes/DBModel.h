@@ -18,4 +18,6 @@
 +(BOOL)addPermission:(NSString*)value;
 +(BOOL)hasPermission:(NSString *)permission;
 
++ (BOOL)purgeTable;
+
 @end

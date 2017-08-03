@@ -10,6 +10,12 @@
 
 @implementation _viewBase
 
+
+-(instancetype)_init
+{
+	return [super init];
+}
+
 -(instancetype)init
 {
 	self = [super init];

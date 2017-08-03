@@ -144,7 +144,7 @@
 
 -(void)hideArrangedSubview:(UIView*)view animated:(BOOL)animated
 {
-	[self hideArrangedSubview:view animated:YES completion:nil];
+	[self hideArrangedSubview:view animated:animated completion:nil];
 }
 
 -(void)hideArrangedSubview:(UIView*)view animated:(BOOL)animated completion:(void(^)())callback
@@ -153,6 +153,11 @@
 	MyStackViewArrangedViewHolder* holder = [self getHolderForArrangedSubview:view];
 	holder.view2Layout = _view2Layout;
 	[holder hideAnimated:animated completion:callback];
+}
+
+-(BOOL)hasArrangedSubview:(UIView*)aView
+{
+	return [self getHolderForArrangedSubview:aView forceGet:NO] ? YES : NO;
 }
 
 -(void)showArrangedSubview:(UIView*)view animated:(BOOL)animated
@@ -169,9 +174,15 @@
 
 -(MyStackViewArrangedViewHolder*)getHolderForArrangedSubview:(UIView*)view
 {
+	return [self getHolderForArrangedSubview:view forceGet:YES];
+}
+
+-(MyStackViewArrangedViewHolder*)getHolderForArrangedSubview:(UIView*)view forceGet:(bool)force_get
+{
 	MyStackViewArrangedViewHolder* holder = [view dataObjectForKey:@"MyStackViewArrangedViewHolder"];
 	
-	NSAssert(holder && [views containsObject:holder], @"hideArrangedSubview: view is not added to the stack");
+	if (force_get)
+		NSAssert(holder && [views containsObject:holder], @"hideArrangedSubview: view is not added to the stack");
 	
 	return holder;
 }
@@ -201,6 +212,11 @@
 	[self addArrangedSubview:subview margins:margins animated:animated fillMode:fillMode initiallyHidden:hidden onTop:NO];
 }
 
+-(void)addArrangedSubview:(UIView *)subview initiallyHidden:(BOOL)hidden
+{
+	[self addArrangedSubview:subview margins:UIEdgeInsetsZero animated:NO fillMode:MyVerticalStackViewFillModeFill initiallyHidden:hidden onTop:NO targetView:nil];
+}
+
 -(void)addArrangedSubview:(UIView *)subview margins:(UIEdgeInsets)margins animated:(BOOL)animated fillMode:(MyVerticalStackViewFillMode)fillMode initiallyHidden:(BOOL)hidden onTop:(BOOL)onTop
 {
 	[self addArrangedSubview:subview margins:margins animated:animated fillMode:fillMode initiallyHidden:hidden onTop:NO targetView:nil];
@@ -208,10 +224,10 @@
 
 -(MyStackViewArrangedViewHolder*)getLowerViewOf:(MyStackViewArrangedViewHolder*)view
 {
-	NSUInteger idx = [views indexOfObject:view];
+	int idx = (int)[views indexOfObject:view];
 	NSAssert(idx != NSNotFound, @"view is not in the hierarchy!");
 	
-	if (idx <= (int)views.count-2)
+	if (idx - (int)views.count + 2 <= 0)
 		return views[idx+1];
 	else
 		return nil;

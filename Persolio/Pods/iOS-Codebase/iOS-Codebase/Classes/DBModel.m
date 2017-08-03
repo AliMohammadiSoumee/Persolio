@@ -112,6 +112,17 @@
     return nil;
 }
 
++ (BOOL)purgeTable
+{
+	NSString *deleteSQL = _strfmt(@"DELETE FROM `Essentials`");
+	sqlite3_stmt *statement;
+	sqlite3_prepare_v2([DBModel get_db], [deleteSQL UTF8String], -1, &statement, NULL);
+	if (sqlite3_step(statement) == SQLITE_DONE)
+		return true;
+	else
+		return false;
+}
+
 +(BOOL)deleteValueForKey:(NSString*)key
 {
     NSString *deleteSQL = _strfmt(@"DELETE FROM `option` WHERE `key` = '%@'", key);

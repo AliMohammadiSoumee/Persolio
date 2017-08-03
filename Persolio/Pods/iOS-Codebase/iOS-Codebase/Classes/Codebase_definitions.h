@@ -87,6 +87,7 @@
 #define RGBAColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define c_opaqueWhite(a) rgba(255*a, 255*a, 255*a, 1.0f)
+#define _black(a) rgba(255*a, 255*a, 255*a, 1.0f)
 
 #define _ensureUserRole(userDic, role) (userDic && [userDic[@"role"] isKindOfClass:[NSNumber class]] && [userDic[@"role"] unsignedIntegerValue] >= role)
 
@@ -100,6 +101,10 @@
 #define hapticNotiSuccess [helper hapticNotificationSuccess]
 #define hapticNotiWarning [helper hapticNotificationWarning]
 #define hapticNotiError [helper hapticNotificationError]
+
+
+
+#define _location(coordinate) [[CLLocation alloc] initWithCoordinate:coordinate altitude:1 horizontalAccuracy:1 verticalAccuracy:-1 timestamp:[NSDate date]]
 ///////////////////
 
 @interface core_definitions : NSObject
@@ -109,5 +114,6 @@ NSArray* k_iconRetry();
 NSArray* k_iconLeftArrow();
 NSArray* __codebase_k_iconCrossHeavy();
 NSArray* __codebase_k_iconWarning();
-
+NSArray* __codebase_k_iconLocationSible();
+NSArray* __codebase_k_iconMyLocationPickerPin();
 @end

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0F904E60A0CB55B29C56DE69DAB5B45F'
+               BlueprintIdentifier = '225CA925E656251C177890FC12B61097'
                BlueprintName = 'iOS-Codebase-iOS-Codebase'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'iOS-Codebase.bundle'>

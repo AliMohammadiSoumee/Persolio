@@ -12,7 +12,7 @@
 
 -(id)getNearestVC
 {
-	UIView* nextView = self.superview;
+	UIView* nextView = self;
 	while (![nextView.nextResponder isKindOfClass:[UIViewController class]] && nextView != nil)
 	{
 		nextView = nextView.superview;
@@ -23,7 +23,7 @@
 
 -(id)getNearestVCByClass:(NSString*)class_str
 {
-	UIView* nextView = self.superview;
+	UIView* nextView = self;
 	while (![nextView.nextResponder isKindOfClass:NSClassFromString(class_str)] && nextView != nil)
 	{
 		nextView = nextView.superview;
@@ -34,7 +34,7 @@
 
 -(id)getNearestParentViewByClass:(NSString*)class_str
 {
-	UIView* parent = self.superview;
+	UIView* parent = self;
 	while (![parent isKindOfClass:NSClassFromString(class_str)] && parent != nil)
 		parent = parent.superview;
 	

@@ -13,5 +13,7 @@
 - (UIImage *)imageByScalingToSize:(CGSize)targetSize;
 - (UIImage *)imageRotatedByRadians:(CGFloat)radians;
 - (UIImage *)imageRotatedByDegrees:(CGFloat)degrees;
+- (UIImage*)grayScaleImage;
+-(UIImage*)blurredImageWithRadius:(CGFloat)radius;
 
 @end;

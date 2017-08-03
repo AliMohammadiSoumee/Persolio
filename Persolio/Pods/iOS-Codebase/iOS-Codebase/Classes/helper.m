@@ -18,14 +18,14 @@
 {
 	if ([UISelectionFeedbackGenerator class])
 	{
-	static UISelectionFeedbackGenerator* selectionFeedbackGenerator;
-	static dispatch_once_t onceToken;
-	dispatch_once(&onceToken, ^{
-		selectionFeedbackGenerator = [UISelectionFeedbackGenerator new];
-		[selectionFeedbackGenerator prepare];
-	});
-	
-	return selectionFeedbackGenerator;
+		static UISelectionFeedbackGenerator* selectionFeedbackGenerator;
+		static dispatch_once_t onceToken;
+		dispatch_once(&onceToken, ^{
+			selectionFeedbackGenerator = [UISelectionFeedbackGenerator new];
+			[selectionFeedbackGenerator prepare];
+		});
+		
+		return selectionFeedbackGenerator;
 	}
 	else
 		
@@ -123,7 +123,7 @@
 {
 	[[self notificationFeedbackGenerator] notificationOccurred:UINotificationFeedbackTypeSuccess];
 }
-											 
+
 +(void)hapticNotificationWarning
 {
 	[[self notificationFeedbackGenerator] notificationOccurred:UINotificationFeedbackTypeWarning];
@@ -183,7 +183,8 @@
 	else
 		return _strfmt(@"%@.%@.%@-%@", version[0], version[1], version[2], build);
 }
-+(UIBezierPath*)bezierPathWithDescArray:(NSArray*)array andWidth:(CGFloat)w
+
++(UIBezierPath*)bezierPathWithDescArray:(NSArray*)array andWidth:(CGFloat)w closePath:(bool)closePath
 {
 	UIBezierPath* path = [UIBezierPath bezierPath];
 	for (NSArray* arr in array) {
@@ -196,9 +197,14 @@
 			[path addCurveToPoint:CGPointMake([arr[1] floatValue]/100*w, [arr[2] floatValue]/100*w) controlPoint1:CGPointMake([arr[3] floatValue]/100*w, [arr[4] floatValue]/100*w) controlPoint2:CGPointMake([arr[5] floatValue]/100*w, [arr[6] floatValue]/100*w)];
 	}
 	
-	[path closePath];
+	if (closePath)
+		[path closePath];
 	
 	return path;
+}
++(UIBezierPath*)bezierPathWithDescArray:(NSArray*)array andWidth:(CGFloat)w
+{
+	return [self bezierPathWithDescArray:array andWidth:w closePath:YES];
 }
 
 
@@ -323,18 +329,55 @@
 }
 
 
+//static NSDictionary *localizable;
+//+(void)prepareLocalizableStrings
+//{
+//	NSString *path = [[NSBundle mainBundle] pathForResource:@"Localizable"
+//													 ofType:@"strings"];
+//	
+//	localizable = [NSDictionary dictionaryWithContentsOfFile:path];
+//}
+//
+//+(NSString*)localizableValueWithKey:(NSString*)key
+//{
+//	return localizable[key];
+//}
+
+
 static NSDictionary *localizable;
-+(void)prepareLocalizableStrings
+static NSString* langKey;
++(void)setLang:(NSString*)key
 {
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"Localizable"
-													 ofType:@"strings"];
+	langKey = key;
+	
+	[DBModel updateValue:key forKey:@"_lang"];
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"Localizable" ofType:@"strings" inDirectory:nil forLocalization:key];
 	
 	localizable = [NSDictionary dictionaryWithContentsOfFile:path];
+	
+	NSAssert(localizable, @"no .strings file found for key: %@", key);
 }
+
++(NSString*)getLang
+{
+	return langKey;
+}
+
++(void)load
+{
+	[super load];
+	
+	NSString* lang_val = [DBModel getValueForKey:@"_lang"];
+	if (_str_ok2(lang_val))
+	{
+		[self setLang:lang_val];
+	}
+}
+
 
 +(NSString*)localizableValueWithKey:(NSString*)key
 {
-	return localizable[key];
+	return localizable[key] ? localizable[key] : key;
 }
 //////
 
@@ -378,16 +421,16 @@ static NSDictionary *localizable;
 +(NSString *)thousandSeparatedStringFromNumber:(NSNumber *)number
 {
 	static NSNumberFormatter* numberFormatter;
-
-		if (!numberFormatter)
-		{
-			numberFormatter = [[NSNumberFormatter alloc] init];
-			[numberFormatter setFormatterBehavior: NSNumberFormatterBehavior10_4];
-			[numberFormatter setNumberStyle: NSNumberFormatterDecimalStyle];
-		}
-		
-		return [numberFormatter stringFromNumber:number];
-		
+	
+	if (!numberFormatter)
+	{
+		numberFormatter = [[NSNumberFormatter alloc] init];
+		[numberFormatter setFormatterBehavior: NSNumberFormatterBehavior10_4];
+		[numberFormatter setNumberStyle: NSNumberFormatterDecimalStyle];
+	}
+	
+	return [numberFormatter stringFromNumber:number];
+	
 	
 }
 
@@ -411,19 +454,37 @@ static NSDictionary *localizable;
 {
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-	sqlite3_shutdown();
-	if (sqlite3_threadsafe() > 0) {
-		int retCode = sqlite3_config(SQLITE_CONFIG_SERIALIZED);
-		if (retCode == SQLITE_OK) {
-			NSLog(@"Can now use sqlite on multiple threads, using the same connection");
+		sqlite3_shutdown();
+		if (sqlite3_threadsafe() > 0) {
+			int retCode = sqlite3_config(SQLITE_CONFIG_SERIALIZED);
+			if (retCode == SQLITE_OK) {
+				NSLog(@"Can now use sqlite on multiple threads, using the same connection");
+			} else {
+				NSLog(@"setting sqlite thread safe mode to serialized failed!!! return code: %d", retCode);
+			}
 		} else {
-			NSLog(@"setting sqlite thread safe mode to serialized failed!!! return code: %d", retCode);
+			NSLog(@"Your SQLite database is not compiled to be threadsafe.");
 		}
-	} else {
-		NSLog(@"Your SQLite database is not compiled to be threadsafe.");
-	}
-	sqlite3_initialize();
-		});
+		sqlite3_initialize();
+	});
+}
+
++(UIView*)horizontalHairlineWithColor:(UIColor*)color
+{
+	UIView* hairline = [UIView new];
+	hairline.backgroundColor = color;
+	hairline.translatesAutoresizingMaskIntoConstraints = NO;
+	[hairline sdc_pinHeight:_1pixel];
+	return hairline;
+}
+
++(UIView*)verticalHairlineWithColor:(UIColor*)color
+{
+	UIView* hairline = [UIView new];
+	hairline.backgroundColor = color;
+	hairline.translatesAutoresizingMaskIntoConstraints = NO;
+	[hairline sdc_pinWidth:_1pixel];
+	return hairline;
 }
 
 @end

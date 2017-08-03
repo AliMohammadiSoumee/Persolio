@@ -102,7 +102,15 @@ FOUNDATION_EXPORT CGFloat const SDCAutoLayoutStandardParentChildDistance;
 -(void)sdc_removeAllConstraints;
 -(NSLayoutConstraint*)sdc_getConstraintToSuperviewWithAttribute:(NSLayoutAttribute)attr;
 -(NSLayoutConstraint*)sdc_getHeightConstraint;
-
+-(NSLayoutConstraint*)sdc_get_verticalCenter;
+-(NSLayoutConstraint*)sdc_get_top;
+-(NSLayoutConstraint*)sdc_get_leading;
+-(NSLayoutConstraint*)sdc_get_leadingOrLeft;
+-(NSLayoutConstraint*)sdc_get_trailing;
+-(NSLayoutConstraint*)sdc_get_trailingOrRight;
+-(NSLayoutConstraint*)sdc_get_bottom;
+-(NSLayoutConstraint*)sdc_get_height;
+-(NSLayoutConstraint*)sdc_get_width;
 
 - (NSLayoutConstraint *)sdc_alignLeftEdgeWithSuperviewMargin:(CGFloat)margin relation:(NSLayoutRelation)relation;
 - (NSLayoutConstraint *)sdc_alignTopEdgeWithSuperviewMargin:(CGFloat)margin relation:(NSLayoutRelation)relation;
