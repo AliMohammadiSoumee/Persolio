@@ -44,7 +44,6 @@
 		A346C6BE1F276E3400FA233F /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = A346C6BD1F276E3400FA233F /* FontAwesome.otf */; };
 		A34BFBB11F3300EE00ADC193 /* CoWorkers.m in Sources */ = {isa = PBXBuildFile; fileRef = A34BFBB01F3300EE00ADC193 /* CoWorkers.m */; };
 		A34BFBB71F33019300ADC193 /* CoWorkersSlideShowTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A34BFBB61F33019300ADC193 /* CoWorkersSlideShowTVC.m */; };
-		A34BFBBA1F33103500ADC193 /* EventVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A34BFBB91F33103500ADC193 /* EventVC.m */; };
 		A34BFBBE1F3310D900ADC193 /* EventCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A34BFBBD1F3310D900ADC193 /* EventCVC.m */; };
 		A34BFBC11F332B7500ADC193 /* EventV.m in Sources */ = {isa = PBXBuildFile; fileRef = A34BFBC01F332B7500ADC193 /* EventV.m */; };
 		A34BFBC91F335C1600ADC193 /* IRANSansMobile_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A34BFBC41F335C1600ADC193 /* IRANSansMobile_Bold.ttf */; };
@@ -118,8 +117,6 @@
 		A34BFBB01F3300EE00ADC193 /* CoWorkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoWorkers.m; sourceTree = "<group>"; };
 		A34BFBB51F33019300ADC193 /* CoWorkersSlideShowTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoWorkersSlideShowTVC.h; sourceTree = "<group>"; };
 		A34BFBB61F33019300ADC193 /* CoWorkersSlideShowTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoWorkersSlideShowTVC.m; sourceTree = "<group>"; };
-		A34BFBB81F33103500ADC193 /* EventVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventVC.h; sourceTree = "<group>"; };
-		A34BFBB91F33103500ADC193 /* EventVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventVC.m; sourceTree = "<group>"; };
 		A34BFBBC1F3310D900ADC193 /* EventCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCVC.h; sourceTree = "<group>"; };
 		A34BFBBD1F3310D900ADC193 /* EventCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCVC.m; sourceTree = "<group>"; };
 		A34BFBBF1F332B7500ADC193 /* EventV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventV.h; sourceTree = "<group>"; };
@@ -239,8 +236,6 @@
 			children = (
 				A33CF0CC1F308B62001FAE8B /* ProfileVC.h */,
 				A33CF0CD1F308B62001FAE8B /* ProfileVC.m */,
-				A34BFBB81F33103500ADC193 /* EventVC.h */,
-				A34BFBB91F33103500ADC193 /* EventVC.m */,
 				A34BFBC31F3340E100ADC193 /* New Group */,
 				A34BFBC21F33407700ADC193 /* Events */,
 				A33CF0C61F307739001FAE8B /* Profile.storyboard */,
@@ -500,7 +495,6 @@
 				A346C6A51F274BCF00FA233F /* TestLibraryVC.m in Sources */,
 				A305879C1F268F4B00E6253F /* AppDelegate.m in Sources */,
 				A320D04B1F2F7F1E00607C01 /* CoWorkersTVC.m in Sources */,
-				A34BFBBA1F33103500ADC193 /* EventVC.m in Sources */,
 				A315F3131F30544C00103E05 /* ShopCVC.m in Sources */,
 				A34BFBB11F3300EE00ADC193 /* CoWorkers.m in Sources */,
 				A30587B01F2690D000E6253F /* MainTBC.m in Sources */,
