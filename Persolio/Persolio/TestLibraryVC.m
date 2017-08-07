@@ -79,6 +79,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     TestVC *vc = _vc_from_storyboard(@"TestLibrary", @"TestVC");
+    vc.num = 1;
     [self.navigationController pushViewController:vc animated:YES];
 }
 @end

@@ -17,6 +17,8 @@
 }
 
 - (void)prepare {
+    UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [self.collectionView setTransform:CGAffineTransformMakeScale(-1, 1)];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
@@ -35,8 +37,7 @@
     ShopCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShopCVC" forIndexPath:indexPath];
     [cell setTransform:CGAffineTransformMakeScale(-1, 1)];
     cell.imageView.image = [UIImage imageNamed:[_array objectAtIndex:indexPath.row % _array.count]];
+    cell.title.text = _title;
     return cell;
 }
-
-
 @end

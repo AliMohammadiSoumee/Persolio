@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLb;
 @property (weak, nonatomic) IBOutlet UILabel *descTV;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *height;
 
 - (void)prepareWithDic:(NSMutableDictionary*)dic;
 @end

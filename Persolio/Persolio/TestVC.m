@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configNavBar];
+    
+    self.titleLb.text = _strfmt(@"تست شماره %ld:", (long)_num);
 }
 
 
@@ -62,6 +64,7 @@
 }
 - (IBAction)nextButtonTouched:(id)sender {
     TestVC *vc = _vc_from_storyboard(@"TestLibrary", @"TestVC");
+    vc.num = self.num + 1;
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)previosButtonTouched:(id)sender {

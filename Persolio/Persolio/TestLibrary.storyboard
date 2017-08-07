@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -67,12 +66,12 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7E-s5-Jll">
-                                                            <rect key="frame" x="0.0" y="163" width="275" height="115"/>
+                                                            <rect key="frame" x="0.0" y="186.5" width="275" height="91.5"/>
                                                             <subviews>
                                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePd-n4-w3F">
-                                                                    <rect key="frame" x="15" y="10" width="245" height="95"/>
+                                                                    <rect key="frame" x="15" y="10" width="245" height="81.5"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pif-bX-oZ5">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آزمون اول" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pif-bX-oZ5">
                                                                             <rect key="frame" x="0.0" y="0.0" width="245" height="35"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <constraints>
@@ -82,8 +81,8 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" تستی برای ارزیابی مهارت ها و شخصیت شما و معرفی استعداد های شما در راستای پیشرفت." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-zc-lhZ">
-                                                                            <rect key="frame" x="0.0" y="35" width="245" height="60"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تستی برای ارزیابی مهارت ها و شخصیت شما و معرفی استعداد های شما در راستای پیشرفت." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-zc-lhZ">
+                                                                            <rect key="frame" x="0.0" y="30" width="240" height="51.5"/>
                                                                             <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="13"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -91,11 +90,11 @@
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="trailing" secondItem="uGg-zc-lhZ" secondAttribute="trailing" id="1L7-Zb-Mxx"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="uGg-zc-lhZ" secondAttribute="trailing" constant="5" id="1L7-Zb-Mxx"/>
                                                                         <constraint firstItem="Pif-bX-oZ5" firstAttribute="leading" secondItem="ePd-n4-w3F" secondAttribute="leading" id="AwK-aR-9BD"/>
                                                                         <constraint firstItem="Pif-bX-oZ5" firstAttribute="top" secondItem="ePd-n4-w3F" secondAttribute="top" id="DLH-NP-wm9"/>
                                                                         <constraint firstItem="uGg-zc-lhZ" firstAttribute="leading" secondItem="ePd-n4-w3F" secondAttribute="leading" id="N3n-TY-sga"/>
-                                                                        <constraint firstItem="uGg-zc-lhZ" firstAttribute="top" secondItem="Pif-bX-oZ5" secondAttribute="bottom" id="PXA-aJ-nA0"/>
+                                                                        <constraint firstItem="uGg-zc-lhZ" firstAttribute="top" secondItem="Pif-bX-oZ5" secondAttribute="bottom" constant="-5" id="PXA-aJ-nA0"/>
                                                                         <constraint firstAttribute="bottom" secondItem="uGg-zc-lhZ" secondAttribute="bottom" id="brF-u4-z0e"/>
                                                                         <constraint firstAttribute="trailing" secondItem="Pif-bX-oZ5" secondAttribute="trailing" id="hxZ-i7-KMf"/>
                                                                     </constraints>
@@ -104,7 +103,8 @@
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="ePd-n4-w3F" firstAttribute="leading" secondItem="e7E-s5-Jll" secondAttribute="leading" constant="15" id="Dbv-8L-o2E"/>
-                                                                <constraint firstAttribute="bottom" secondItem="ePd-n4-w3F" secondAttribute="bottom" constant="10" id="FwU-gB-D9T"/>
+                                                                <constraint firstAttribute="bottom" secondItem="ePd-n4-w3F" secondAttribute="bottom" id="FwU-gB-D9T"/>
+                                                                <constraint firstAttribute="height" constant="91.5" id="Izv-L6-oiq"/>
                                                                 <constraint firstItem="ePd-n4-w3F" firstAttribute="top" secondItem="e7E-s5-Jll" secondAttribute="top" constant="10" id="Rjp-EP-IVh"/>
                                                                 <constraint firstAttribute="trailing" secondItem="ePd-n4-w3F" secondAttribute="trailing" constant="15" id="szE-a4-TLf"/>
                                                             </constraints>
@@ -131,11 +131,11 @@
                                             <constraint firstAttribute="trailing" secondItem="fbK-NK-7U3" secondAttribute="trailing" constant="5" id="ZCa-3r-sIc"/>
                                             <constraint firstItem="fbK-NK-7U3" firstAttribute="top" secondItem="eQ1-5x-di1" secondAttribute="top" constant="5" id="byq-T2-E2d"/>
                                             <constraint firstAttribute="trailing" secondItem="7gn-we-h9m" secondAttribute="trailing" id="lHJ-Qg-xi9"/>
-                                            <constraint firstItem="e7E-s5-Jll" firstAttribute="height" secondItem="eQ1-5x-di1" secondAttribute="height" multiplier="0.4" id="sYT-Gy-BWk"/>
                                             <constraint firstAttribute="bottom" secondItem="7gn-we-h9m" secondAttribute="bottom" id="xOw-zP-dOs"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="descTV" destination="uGg-zc-lhZ" id="kty-Gf-OGv"/>
+                                            <outlet property="height" destination="Izv-L6-oiq" id="Udw-NR-2fU"/>
                                             <outlet property="testImgV" destination="4i6-bP-7Kn" id="3xg-Bg-wTD"/>
                                             <outlet property="titleLb" destination="Pif-bX-oZ5" id="fRw-au-xdB"/>
                                         </connections>
@@ -320,6 +320,7 @@
                         <outlet property="happyBorder" destination="z8y-fj-XUJ" id="qLD-Pl-cQA"/>
                         <outlet property="sadBorder" destination="flH-1e-4WW" id="5Fm-mz-XrP"/>
                         <outlet property="sosoBorder" destination="qng-Je-CC9" id="lQ5-yJ-M1u"/>
+                        <outlet property="titleLb" destination="9D6-bV-NIh" id="x5u-hP-k5H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWt-jt-zJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>

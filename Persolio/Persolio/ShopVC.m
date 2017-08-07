@@ -24,7 +24,6 @@
     [super viewDidLoad];
     
     [self configNavBar];
-    
     array = @[@[@"book0.jpg", @"book1.jpg", @"book2.jpg", @"book3.jpg"], @[@"card0.jpg", @"card1.jpg", @"card2.jpg", @"card3.jpg"], @[@"voice0.jpg", @"voice1.jpg", @"voice2.jpg"]];
     title = @[@"کتاب", @"فلش کارت", @"صدا"];
     _tableView.delegate = self;
@@ -71,7 +70,7 @@
         return 200;
     }
     else {
-        return 150;
+        return 180;
     }
 }
 

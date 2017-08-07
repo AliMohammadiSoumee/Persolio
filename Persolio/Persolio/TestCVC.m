@@ -13,6 +13,8 @@
 - (void)prepareWithDic:(NSMutableDictionary*)dic {
     if (self) {
         
+        
+        
         if (dic[@"image"]) {
             NSString *imgName = _strfmt(@"%@.png", dic[@"image"]);
             UIImage *image = [UIImage imageNamed:imgName];
@@ -31,10 +33,12 @@
             if ([dic[@"tag"] integerValue] == 0) {
                 [self.titleLb setFont:[_titleLb.font fontWithSize:24]];
                 [self.descTV setFont:[_titleLb.font fontWithSize:16]];
+                _height.constant = self.bounds.size.height * 0.3;
             }
             else {
                 [self.titleLb setFont:[_titleLb.font fontWithSize:18]];
                 [self.descTV setFont:[_titleLb.font fontWithSize:12]];
+                _height.constant = self.bounds.size.height * 0.4;
             }
         }
     }

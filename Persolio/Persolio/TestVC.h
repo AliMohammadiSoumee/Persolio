@@ -12,5 +12,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sosoBorder;
 @property (weak, nonatomic) IBOutlet UIImageView *sadBorder;
 @property (weak, nonatomic) IBOutlet UIImageView *happyBorder;
+@property NSInteger num;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLb;
 
 @end

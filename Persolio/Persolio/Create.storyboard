@@ -182,8 +182,8 @@
                                     <constraint firstItem="qJD-dt-T3n" firstAttribute="leading" secondItem="gug-Sw-bxn" secondAttribute="leading" id="p5n-oM-tVD"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EWH-YT-aDX">
-                                <rect key="frame" x="0.0" y="-231" width="375" height="150"/>
+                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWH-YT-aDX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="150"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wr-6Z-z1a">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -403,7 +403,7 @@
         <image name="BackgroundImage" width="419" height="704"/>
         <image name="CreateMenu" width="28" height="28"/>
         <image name="Move" width="34" height="33"/>
-        <image name="OutPutPhoto1" width="2144" height="2920"/>
+        <image name="OutPutPhoto1" width="1876" height="2555"/>
         <image name="Text" width="35" height="33"/>
         <image name="Theme" width="36" height="33"/>
         <image name="collectionV" width="1410" height="335"/>
