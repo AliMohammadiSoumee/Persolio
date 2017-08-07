@@ -1,35 +1,27 @@
 //
-//  CoWorkerDetailsVC.m
+//  DetailsVC.m
 //  Persolio
 //
-//  Created by Ali Soume`e on 5/9/1396 AP.
+//  Created by Ali Soume`e on 5/15/1396 AP.
 //  Copyright © 1396 Ali Soume`e. All rights reserved.
 //
 
-#import "CoWorkerDetailsVC.h"
+#import "DetailsVC.h"
 
-@interface CoWorkerDetailsVC ()
+@interface DetailsVC ()
 
 @end
 
-@implementation CoWorkerDetailsVC
+@implementation DetailsVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configNavBar];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-- (void)configNavBar {
-    self.navigationItem.title = [NSString stringWithFormat:@"Details"];
-    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
-    [self.navigationController.navigationBar
-     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]}];
 }
 
 /*

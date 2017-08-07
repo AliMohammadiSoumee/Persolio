@@ -14,6 +14,7 @@
 @interface TestLibraryVC () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSArray <NSString*> *testNames;
+@property (nonatomic, strong) NSArray <NSString*> *titles;
 
 @end
 
@@ -22,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _testNames = [NSArray arrayWithObjects:@"Test1", @"Test2", @"Test3", @"Test4", nil];
+    _titles = [NSArray arrayWithObjects:@"آزمون اول", @"آزمون دوم", @"آزمون سوم", @"آزمون چهارم", nil];
     
     
     [self prepareCollectionView];
@@ -66,8 +68,8 @@
     NSMutableDictionary *dic = [NSMutableDictionary new];
     NSInteger index = (indexPath.row) % _testNames.count;
     dic[@"image"] = _testNames[index];
-    dic[@"title"] = _testNames[index];
-    dic[@"desc"] = @"a test that tells you \n your personality type";
+    dic[@"title"] = _titles[index];
+    dic[@"desc"] = @"تستی برای ارزیابی مهارت ها و شخصیت شما";
     dic[@"tag"] = @(indexPath.row % 3);
     
     [cell prepareWithDic:dic];

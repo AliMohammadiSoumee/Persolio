@@ -7,9 +7,10 @@
 //
 
 #import "MainTBC.h"
+#import "BasketV.h"
 
 
-@interface MainTBC ()
+@interface MainTBC () 
 
 @end
 
@@ -45,6 +46,16 @@
     coWorkersItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     [coWorkersNavC setTabBarItem:coWorkersItem];
     
+    UINavigationController *creatNavC = _vc_from_storyboard(@"Create", @"CreateNavC");
+    [self addChildViewController:creatNavC];
+    UITabBarItem *creatItem = [UITabBarItem new];
+    creatItem.tag = 10;
+    creatItem.image = [[UIImage imageNamed:@"Edit-off"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    creatItem.selectedImage = [[UIImage imageNamed:@"Edit-on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    creatItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    [creatNavC setTabBarItem:creatItem];
+
+    
     UINavigationController *shopNavC = _vc_from_storyboard(@"Shop", @"ShopNavC");
     [self addChildViewController:shopNavC];
     UITabBarItem *shopItem = [UITabBarItem new];
@@ -60,8 +71,17 @@
     profileItem.selectedImage = [[UIImage imageNamed:@"ProfileButtonSelected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     profileItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     [profileNavC setTabBarItem:profileItem];
+}
 
-    
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    if (item.tag == 10) {
+        self.tabBar.barTintColor = [UIColor blackColor];
+        self.tabBar.translucent = NO;
+    }
+    else {
+        self.tabBar.barTintColor = [UIColor whiteColor];
+        self.tabBar.translucent = YES;
+    }
 }
 
 

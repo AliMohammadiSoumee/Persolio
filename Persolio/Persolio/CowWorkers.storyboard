@@ -89,8 +89,8 @@
                                                     <rect key="frame" x="15" y="15" width="345" height="219.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWS-gF-Ccd">
-                                                            <rect key="frame" x="276.5" y="0.0" width="58.5" height="36.5"/>
-                                                            <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="23"/>
+                                                            <rect key="frame" x="274.5" y="0.0" width="60.5" height="36.5"/>
+                                                            <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="23"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -329,7 +329,7 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLj-Uv-Xuy">
                                                         <rect key="frame" x="10" y="246" width="250" height="156"/>
-                                                        <mutableString key="text">با كاربين مي توانيد از آخرين فرصت هاي شغلي شركت هاي برتر ايراني و بين المللي آگاه شويد و براي آنها اقدام كنيد. با اين اپليكيشن كاربردی شما براي اولين بار مي توانيد به رايگان با گوشي همراه خود به موقعيت هاي كاري متنوع دسترسي داشته باشيد و با معرفي كامل خود، به محل كار جديدتان برسيد!</mutableString>
+                                                        <string key="text">با كاربين مي توانيد از آخرين فرصت هاي شغلي شركت هاي برتر ايراني و بين المللي آگاه شويد و براي آنها اقدام كنيد. با اين اپليكيشن كاربردی شما براي اولين بار مي توانيد به رايگان با گوشي همراه خود به موقعيت هاي كاري متنوع دسترسي داشته باشيد و با معرفي كامل خود، به محل كار جديدتان برسيد!</string>
                                                         <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -569,7 +569,7 @@
             <objects>
                 <navigationController storyboardIdentifier="CoWorkersNavC" automaticallyAdjustsScrollViewInsets="NO" id="qNe-RO-OAS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Pnk-0E-oHR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pnk-0E-oHR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

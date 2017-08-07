@@ -1,38 +1,36 @@
 //
-//  EventV.m
+//  BasketV.m
 //  Persolio
 //
-//  Created by Ali Soume`e on 5/12/1396 AP.
+//  Created by Ali Soume`e on 5/14/1396 AP.
 //  Copyright © 1396 Ali Soume`e. All rights reserved.
 //
 
-#import "EventV.h"
-#import "EventCVC.h"
+#import "BasketV.h"
+#import "BasketCVC.h"
 
-
-@interface EventV()
+@interface BasketV()
 {
-    CGFloat num;
+    int num;
     UICollectionReusableView *headerV;
 }
+
 @end
 
-@implementation EventV
-
-
+@implementation BasketV
 
 - (void)prepareCollectionView {
     num = 21;
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.minimumLineSpacing = 5;
     
-    CGRect frame = CGRectMake(0, 0, self.bounds.size.width, ceil((double)num / 3) * ((self.bounds.size.width - 20) / 3 + layout.minimumLineSpacing + 10));
+    CGRect frame = CGRectMake(0, 0, self.bounds.size.width, ceil((double)num / 4) * ((self.bounds.size.width - 25) / 4 + layout.minimumLineSpacing + 10));
     
     _collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
     [self addSubview:_collectionView];
     _collectionView.scrollEnabled = NO;
     [_collectionView sdc_alignEdgesWithSuperview:UIRectEdgeAll];
-    [_collectionView registerClass:EventCVC.self forCellWithReuseIdentifier:@"EventCVC"];
+    [_collectionView registerClass:BasketCVC.self forCellWithReuseIdentifier:@"BasketCVC"];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     _collectionView.backgroundColor = [UIColor clearColor];
@@ -52,7 +50,7 @@
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    EventCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventCVC" forIndexPath:indexPath];
+    BasketCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BasketCVC" forIndexPath:indexPath];
     return cell;
 }
 
@@ -60,33 +58,49 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if (kind == UICollectionElementKindSectionHeader) {
         headerV = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
-
+        
+        
+        UIView *borderV = [UIView new];
+        borderV.translatesAutoresizingMaskIntoConstraints = NO;
+        borderV.clipsToBounds = YES;
+        borderV.layer.cornerRadius = 15;
+        borderV.layer.borderWidth = 1;
+        borderV.layer.borderColor = [UIColor colorWithRed:182.0/255 green:182.0/255 blue:182.0/255 alpha:1].CGColor;
+        [headerV addSubview:borderV];
+        [borderV sdc_horizontallyCenterInSuperview];
+        [borderV sdc_verticallyCenterInSuperview];
+        [borderV sdc_pinHeight:30];
+        [borderV sdc_pinWidth:250];
+        
+        
         UIButton *filterBtn = [UIButton new];
         UIButton *addBtn = [UIButton new];
         
-        [filterBtn setImage:[UIImage imageNamed:@"filter-on"] forState:UIControlStateNormal];
-        [addBtn setImage:[UIImage imageNamed:@"plus-off"] forState:UIControlStateNormal];
+        [filterBtn setTitle:@"Pix" forState:UIControlStateNormal];
+//        UIControlEventTouchUpInside];
+//        [filterBtn setTitleColor:[UIColor colorWithRed:182.0/255 green:182.0/255 blue:182.0/255 alpha:1] forState:UIControlStateNormal];
+        [filterBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [addBtn setTitle:@"Events" forState:UIControlStateNormal];
+        [addBtn setTitleColor:[UIColor colorWithRed:182.0/255 green:182.0/255 blue:182.0/255 alpha:1] forState:UIControlStateNormal];
+        [addBtn addTarget:self action:@selector(addButtonTouched) forControlEvents:UIControlEventTouchUpInside];
         
         UIView *middle = [UIView new];
         middle.translatesAutoresizingMaskIntoConstraints = NO;
-        [headerV addSubview:middle];
+        [borderV addSubview:middle];
+        middle.backgroundColor = [UIColor colorWithRed:182.0/255 green:182.0/255 blue:182.0/255 alpha:1];
         [middle sdc_alignEdgesWithSuperview:UIRectEdgeTop | UIRectEdgeBottom];
-        [middle sdc_pinWidth:0];
+        [middle sdc_pinWidth:1];
         [middle sdc_horizontallyCenterInSuperview];
         
-        [headerV addSubview:filterBtn];
-        filterBtn.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
+        [borderV addSubview:filterBtn];
         filterBtn.translatesAutoresizingMaskIntoConstraints = NO;
-        [filterBtn sdc_alignEdgesWithSuperview:UIRectEdgeTop | UIRectEdgeBottom insets:UIEdgeInsetsMake(5, 0, -5, 0)];
-        [filterBtn sdc_pinHeightWidthRatio:1 constant:0];
-        [filterBtn sdc_alignEdge:UIRectEdgeRight withEdge:UIRectEdgeLeft ofView:middle inset:-30];
+        [filterBtn sdc_alignEdgesWithSuperview:UIRectEdgeTop | UIRectEdgeBottom | UIRectEdgeLeft insets:UIEdgeInsetsMake(5, 10, -5, 0)];
+        [filterBtn sdc_alignEdge:UIRectEdgeRight withEdge:UIRectEdgeLeft ofView:middle];
         
-        [headerV addSubview:addBtn];
-        addBtn.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
+        [borderV addSubview:addBtn];
         addBtn.translatesAutoresizingMaskIntoConstraints = NO;
-        [addBtn sdc_alignEdgesWithSuperview:UIRectEdgeTop | UIRectEdgeBottom insets:UIEdgeInsetsMake(5, 0, -5, 0)];
-        [addBtn sdc_pinHeightWidthRatio:1 constant:0];
-        [addBtn sdc_alignEdge:UIRectEdgeLeft withEdge:UIRectEdgeRight ofView:middle inset:30];
+        [addBtn sdc_alignEdgesWithSuperview:UIRectEdgeTop | UIRectEdgeBottom | UIRectEdgeRight insets:UIEdgeInsetsMake(5, 0, -5, 0)];
+        [addBtn sdc_alignEdge:UIRectEdgeLeft withEdge:UIRectEdgeRight ofView:middle];
         
         UIView *hairLineV = [UIView new];
         hairLineV.translatesAutoresizingMaskIntoConstraints = NO;
@@ -107,7 +121,7 @@
 
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat height = (self.bounds.size.width - 20) / 3;
+    CGFloat height = (self.bounds.size.width - 25) / 4;
     return CGSizeMake(height, height);
 }
 
@@ -116,15 +130,14 @@
 }
 
 
-- (void)prepareHeaderView {
-    headerV = [[UICollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, self.collectionView.bounds.size.width, 40)];
-    headerV.backgroundColor = [UIColor greenColor];
-}
-
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(10, 0, 0, 0);
 }
 
-
+- (void)addButtonTouched {
+    if ([_delegate respondsToSelector:@selector(addButtonTouched)]) {
+        [_delegate addButtonTouched];
+    }
+}
 
 @end

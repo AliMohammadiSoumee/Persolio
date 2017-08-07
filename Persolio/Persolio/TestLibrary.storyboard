@@ -9,6 +9,14 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile_Light.ttf">
+            <string>IRANSansMobile-Light</string>
+        </array>
+        <array key="IRANSansMobile_Medium.ttf">
+            <string>IRANSansMobile-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Test LibraryVC-->
         <scene sceneID="Szd-UO-B01">
@@ -55,24 +63,24 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7E-s5-Jll">
-                                                            <rect key="frame" x="0.0" y="180.5" width="275" height="97.5"/>
+                                                            <rect key="frame" x="0.0" y="167" width="275" height="111"/>
                                                             <subviews>
                                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePd-n4-w3F">
-                                                                    <rect key="frame" x="15" y="10" width="245" height="77.5"/>
+                                                                    <rect key="frame" x="15" y="10" width="245" height="91"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pif-bX-oZ5">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="25"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pif-bX-oZ5">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="30"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="height" constant="25" id="4Ee-de-XiG"/>
+                                                                                <constraint firstAttribute="height" constant="30" id="4Ee-de-XiG"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                                            <fontDescription key="fontDescription" name="IRANSansMobile-Medium" family="IRANSansMobile" pointSize="18"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-zc-lhZ">
-                                                                            <rect key="frame" x="0.0" y="25" width="245" height="52.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                            <rect key="frame" x="0.0" y="30" width="245" height="61"/>
+                                                                            <fontDescription key="fontDescription" name="IRANSansMobile-Light" family="IRANSansMobile" pointSize="13"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -107,7 +115,7 @@
                                                         <constraint firstItem="4i6-bP-7Kn" firstAttribute="leading" secondItem="fbK-NK-7U3" secondAttribute="leading" id="aKU-RX-mlt"/>
                                                         <constraint firstAttribute="trailing" secondItem="e7E-s5-Jll" secondAttribute="trailing" id="mnE-EE-nHY"/>
                                                         <constraint firstAttribute="bottom" secondItem="4i6-bP-7Kn" secondAttribute="bottom" id="sgf-WP-mHk"/>
-                                                        <constraint firstItem="e7E-s5-Jll" firstAttribute="height" secondItem="fbK-NK-7U3" secondAttribute="height" multiplier="0.35" id="uLJ-x7-uVa"/>
+                                                        <constraint firstItem="e7E-s5-Jll" firstAttribute="height" secondItem="fbK-NK-7U3" secondAttribute="height" multiplier="0.4" id="uLJ-x7-uVa"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
