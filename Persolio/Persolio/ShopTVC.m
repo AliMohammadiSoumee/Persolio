@@ -17,6 +17,7 @@
 }
 
 - (void)prepare {
+    [self.collectionView setTransform:CGAffineTransformMakeScale(-1, 1)];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     self.titleLb.text = _title;
@@ -32,6 +33,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ShopCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShopCVC" forIndexPath:indexPath];
+    [cell setTransform:CGAffineTransformMakeScale(-1, 1)];
     cell.imageView.image = [UIImage imageNamed:[_array objectAtIndex:indexPath.row % _array.count]];
     return cell;
 }

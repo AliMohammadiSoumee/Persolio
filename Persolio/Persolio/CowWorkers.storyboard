@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="VEr-is-tcF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="VEr-is-tcF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bLD-GF-HcH">
@@ -184,7 +184,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="H8P-N6-rz4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="H8P-N6-rz4">
                                 <rect key="frame" x="0.0" y="20" width="375" height="1980"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGa-xf-msC">
@@ -196,7 +196,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q5-jE-jnU">
                                                 <rect key="frame" x="10" y="10" width="355" height="1435.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Karbin.png" translatesAutoresizingMaskIntoConstraints="NO" id="hEK-St-T5X">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Karbin" translatesAutoresizingMaskIntoConstraints="NO" id="hEK-St-T5X">
                                                         <rect key="frame" x="225" y="10" width="120" height="120"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="hEK-St-T5X" secondAttribute="height" id="NC6-id-WRX"/>
@@ -429,7 +429,7 @@
                                                             <constraint firstAttribute="height" constant="230" id="ohO-My-Q9U"/>
                                                         </constraints>
                                                     </view>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KarbinApp1.png" translatesAutoresizingMaskIntoConstraints="NO" id="aWc-mZ-2hB">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KarbinApp1" translatesAutoresizingMaskIntoConstraints="NO" id="aWc-mZ-2hB">
                                                         <rect key="frame" x="10" y="876.5" width="162" height="235"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="235" id="vZG-6G-J69"/>
@@ -440,7 +440,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KarbinApp2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jih-Cr-Ed6">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KarbinApp2" translatesAutoresizingMaskIntoConstraints="NO" id="Jih-Cr-Ed6">
                                                         <rect key="frame" x="182" y="876.5" width="163" height="235"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="235" id="mN6-np-oC3"/>
@@ -451,7 +451,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test4.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Xe-Om-nrv">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test4" translatesAutoresizingMaskIntoConstraints="NO" id="1Xe-Om-nrv">
                                                         <rect key="frame" x="10" y="1265.5" width="335" height="160"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="160" id="7EG-6d-wDz"/>
@@ -592,10 +592,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackgroundImage.png" width="419" height="704"/>
+        <image name="BackgroundImage" width="419" height="704"/>
+        <image name="Karbin" width="120" height="120"/>
         <image name="Karbin.png" width="120" height="120"/>
-        <image name="KarbinApp1.png" width="200" height="247"/>
-        <image name="KarbinApp2.png" width="200" height="247"/>
-        <image name="Test4.png" width="317" height="121"/>
+        <image name="KarbinApp1" width="200" height="247"/>
+        <image name="KarbinApp2" width="200" height="247"/>
+        <image name="Test4" width="317" height="121"/>
     </resources>
 </document>

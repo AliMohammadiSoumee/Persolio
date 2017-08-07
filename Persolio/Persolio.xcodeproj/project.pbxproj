@@ -13,6 +13,13 @@
 		A30587A41F268F4B00E6253F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30587A31F268F4B00E6253F /* Assets.xcassets */; };
 		A30587A71F268F4B00E6253F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30587A51F268F4B00E6253F /* LaunchScreen.storyboard */; };
 		A30587B01F2690D000E6253F /* MainTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = A30587AF1F2690D000E6253F /* MainTBC.m */; };
+		A30FAD4E1F38F4CC002F6E60 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A30FAD4D1F38F4CC002F6E60 /* TestVC.m */; };
+		A30FAD521F38F5E8002F6E60 /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = A30FAD4F1F38F5E8002F6E60 /* happy.png */; };
+		A30FAD531F38F5E8002F6E60 /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = A30FAD501F38F5E8002F6E60 /* sad.png */; };
+		A30FAD541F38F5E8002F6E60 /* soso.png in Resources */ = {isa = PBXBuildFile; fileRef = A30FAD511F38F5E8002F6E60 /* soso.png */; };
+		A30FAD581F38FCAF002F6E60 /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = A30FAD571F38FCAF002F6E60 /* border.png */; };
+		A30FAD5F1F38FFF3002F6E60 /* Demo_ConeriaScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A30FAD5E1F38FFF3002F6E60 /* Demo_ConeriaScript.ttf */; };
+		A30FAD621F390E85002F6E60 /* DetailsCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A30FAD611F390E85002F6E60 /* DetailsCVC.m */; };
 		A31424B11F36E6E90044D3D4 /* CreateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A31424B01F36E6E90044D3D4 /* CreateVC.m */; };
 		A31424B31F36E6F30044D3D4 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31424B21F36E6F30044D3D4 /* Create.storyboard */; };
 		A31424C41F36FC520044D3D4 /* CreateCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A31424C31F36FC520044D3D4 /* CreateCVC.m */; };
@@ -94,6 +101,15 @@
 		A30587A81F268F4B00E6253F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30587AE1F2690D000E6253F /* MainTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTBC.h; sourceTree = "<group>"; };
 		A30587AF1F2690D000E6253F /* MainTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTBC.m; sourceTree = "<group>"; };
+		A30FAD4C1F38F4CC002F6E60 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		A30FAD4D1F38F4CC002F6E60 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
+		A30FAD4F1F38F5E8002F6E60 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
+		A30FAD501F38F5E8002F6E60 /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
+		A30FAD511F38F5E8002F6E60 /* soso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soso.png; sourceTree = "<group>"; };
+		A30FAD571F38FCAF002F6E60 /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
+		A30FAD5E1F38FFF3002F6E60 /* Demo_ConeriaScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Demo_ConeriaScript.ttf; sourceTree = "<group>"; };
+		A30FAD601F390E85002F6E60 /* DetailsCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsCVC.h; sourceTree = "<group>"; };
+		A30FAD611F390E85002F6E60 /* DetailsCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsCVC.m; sourceTree = "<group>"; };
 		A31424AF1F36E6E90044D3D4 /* CreateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateVC.h; sourceTree = "<group>"; };
 		A31424B01F36E6E90044D3D4 /* CreateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateVC.m; sourceTree = "<group>"; };
 		A31424B21F36E6F30044D3D4 /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
@@ -299,6 +315,8 @@
 			children = (
 				A31424D51F3741140044D3D4 /* DetailsVC.h */,
 				A31424D61F3741140044D3D4 /* DetailsVC.m */,
+				A30FAD601F390E85002F6E60 /* DetailsCVC.h */,
+				A30FAD611F390E85002F6E60 /* DetailsCVC.m */,
 				A31424DD1F37414B0044D3D4 /* Details.storyboard */,
 			);
 			name = DetailsVC;
@@ -347,6 +365,12 @@
 				A346C6AA1F274CD900FA233F /* TestCVC.m */,
 				A346C6B91F2762D800FA233F /* TestCVL.h */,
 				A346C6BA1F2762D800FA233F /* TestCVL.m */,
+				A30FAD4C1F38F4CC002F6E60 /* TestVC.h */,
+				A30FAD4D1F38F4CC002F6E60 /* TestVC.m */,
+				A30FAD4F1F38F5E8002F6E60 /* happy.png */,
+				A30FAD501F38F5E8002F6E60 /* sad.png */,
+				A30FAD511F38F5E8002F6E60 /* soso.png */,
+				A30FAD571F38FCAF002F6E60 /* border.png */,
 				A346C6A71F274BEF00FA233F /* TestLibrary.storyboard */,
 			);
 			name = TestLibrary;
@@ -363,6 +387,7 @@
 		A346C6BF1F276E3800FA233F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A30FAD5E1F38FFF3002F6E60 /* Demo_ConeriaScript.ttf */,
 				A346C6BD1F276E3400FA233F /* FontAwesome.otf */,
 				A34BFBC41F335C1600ADC193 /* IRANSansMobile_Bold.ttf */,
 				A34BFBC51F335C1600ADC193 /* IRANSansMobile_Light.ttf */,
@@ -531,9 +556,13 @@
 			files = (
 				A30587A71F268F4B00E6253F /* LaunchScreen.storyboard in Resources */,
 				A34BFBCB1F335C1600ADC193 /* IRANSansMobile_Medium.ttf in Resources */,
+				A30FAD5F1F38FFF3002F6E60 /* Demo_ConeriaScript.ttf in Resources */,
+				A30FAD531F38F5E8002F6E60 /* sad.png in Resources */,
+				A30FAD521F38F5E8002F6E60 /* happy.png in Resources */,
 				A315F30D1F30528500103E05 /* Shop.storyboard in Resources */,
 				A32CF3E81F3853FA009F366F /* buy0.jpg in Resources */,
 				A32CF3C91F384AD2009F366F /* book0.jpg in Resources */,
+				A30FAD581F38FCAF002F6E60 /* border.png in Resources */,
 				A346C6BE1F276E3400FA233F /* FontAwesome.otf in Resources */,
 				A32CF3D01F384B24009F366F /* voice2.jpg in Resources */,
 				A32CF3D11F384B24009F366F /* voice1.jpg in Resources */,
@@ -563,6 +592,7 @@
 				A32CF3EB1F3853FA009F366F /* friend0.jpg in Resources */,
 				A32CF3CA1F384AD2009F366F /* book1.jpg in Resources */,
 				A31424DE1F37414B0044D3D4 /* Details.storyboard in Resources */,
+				A30FAD541F38F5E8002F6E60 /* soso.png in Resources */,
 				A34BFBCA1F335C1600ADC193 /* IRANSansMobile_Light.ttf in Resources */,
 				A32CF3EE1F3853FA009F366F /* safar0.jpg in Resources */,
 				A32CF3D21F384B24009F366F /* voice0.jpg in Resources */,
@@ -628,6 +658,8 @@
 				A346C6A51F274BCF00FA233F /* TestLibraryVC.m in Sources */,
 				A305879C1F268F4B00E6253F /* AppDelegate.m in Sources */,
 				A320D04B1F2F7F1E00607C01 /* CoWorkersTVC.m in Sources */,
+				A30FAD621F390E85002F6E60 /* DetailsCVC.m in Sources */,
+				A30FAD4E1F38F4CC002F6E60 /* TestVC.m in Sources */,
 				A315F3131F30544C00103E05 /* ShopCVC.m in Sources */,
 				A34BFBB11F3300EE00ADC193 /* CoWorkers.m in Sources */,
 				A30587B01F2690D000E6253F /* MainTBC.m in Sources */,

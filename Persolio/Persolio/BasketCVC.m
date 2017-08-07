@@ -13,7 +13,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.layer.cornerRadius = 30;
+//        self.layer.cornerRadius = 30;
         self.backgroundColor = [UIColor blueColor];
         self.clipsToBounds = YES;
         

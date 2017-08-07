@@ -11,5 +11,9 @@
 @interface CreateVC : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *menu;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIView *bottomMenu;
+@property (weak, nonatomic) IBOutlet UIView *faceMenuV;
+@property (weak, nonatomic) IBOutlet UIView *GPFMenuV;
+@property (weak, nonatomic) IBOutlet UIImageView *faceBottomMenu;
 @end

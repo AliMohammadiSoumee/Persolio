@@ -22,7 +22,7 @@
     [super viewDidLoad];
     [self configNavBar];
     
-    list = [NSArray arrayWithObjects:@"Sketch.png", @"Drawing.png", @"2DFlat.png", nil];
+    list = [NSArray arrayWithObjects:@"Sketch.png", @"person.png", nil];
     selectedItem = 0;
     
     _collectionView.prefetchingEnabled = NO;
@@ -91,6 +91,13 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (indexPath.row + 1 == [collectionView numberOfItemsInSection:indexPath.section]) {
+        self.tabBarController.tabBar.barTintColor = [UIColor whiteColor];
+        self.tabBarController.tabBar.translucent = YES;
+        [self.tabBarController setSelectedIndex:4];
+        return;
+    }
+    
     NSIndexPath *index = [NSIndexPath indexPathForItem:selectedItem inSection:0];
     CreateCVC *cell = (CreateCVC*)[collectionView cellForItemAtIndexPath:index];
     cell.borderImageView.image = nil;
@@ -100,6 +107,38 @@
     index = [NSIndexPath indexPathForItem:selectedItem inSection:0];
     cell = (CreateCVC*)[collectionView cellForItemAtIndexPath:index];
     cell.borderImageView.image = [UIImage imageNamed:@"BorderImageV.png"];
+    
+    if (selectedItem % 2 == 0) {
+        _imageView.image = [UIImage imageNamed:@"OutPutPhoto1"];
+    }
+    else {
+        _imageView.image = [UIImage imageNamed:@"OutPutPhoto"];
+    }
+}
+
+- (IBAction)GPFTouched:(id)sender {
+    if (selectedItem % 2 == 0) {
+        _imageView.image = [UIImage imageNamed:@"OutPutPhoto1"];
+    }
+    else {
+        _imageView.image = [UIImage imageNamed:@"OutPutPhoto"];
+    }    _menu.hidden = true;
+    
+    _faceMenuV.hidden = YES;
+    _GPFMenuV.hidden = NO;
+    
+    _collectionView.hidden = NO;
+    _faceBottomMenu.hidden = YES;
+}
+- (IBAction)faceCoverTouched:(id)sender {
+    _imageView.image = [UIImage imageNamed:@"OutPutPhoto2"];
+    _menu.hidden = true;
+    
+    _faceMenuV.hidden = NO;
+    _GPFMenuV.hidden = YES;
+    
+    _collectionView.hidden = YES;
+    _faceBottomMenu.hidden = NO;
 }
 
 @end

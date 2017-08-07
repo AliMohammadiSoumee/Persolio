@@ -9,6 +9,7 @@
 #import "TestLibraryVC.h"
 #import "TestCVC.h"
 #import "TestCVL.h"
+#import "TestVC.h"
 
 
 @interface TestLibraryVC () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
@@ -36,9 +37,7 @@
     //coneria
     
     self.navigationItem.title = [NSString stringWithFormat:@"Persolio"];
-//    [self.navigationController.navigationBar setTitleTextAttributes:
-//     @{NSForegroundColorAttributeName:[UIColor blackColor],
-//       NSFontAttributeName:[UIFont fontWithName:@"mplus-1c-regular" size:21]}];
+//    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Coneria" size:21]}];
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]}];
@@ -69,7 +68,7 @@
     NSInteger index = (indexPath.row) % _testNames.count;
     dic[@"image"] = _testNames[index];
     dic[@"title"] = _titles[index];
-    dic[@"desc"] = @"تستی برای ارزیابی مهارت ها و شخصیت شما";
+//    dic[@"desc"] = @" تستی برای ارزیابی مهارت ها و شخصیت شما و معرفی استعداد های شما در راستای پیشرفت.";
     dic[@"tag"] = @(indexPath.row % 3);
     
     [cell prepareWithDic:dic];
@@ -77,4 +76,9 @@
     return cell;
 }
 
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    TestVC *vc = _vc_from_storyboard(@"TestLibrary", @"TestVC");
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end

@@ -7,31 +7,41 @@
 //
 
 #import "DetailsVC.h"
+#import "DetailsCVC.h"
 
-@interface DetailsVC ()
-
+@interface DetailsVC ()<UICollectionViewDelegate, UICollectionViewDataSource>
+{
+    NSArray *array;
+}
 @end
 
 @implementation DetailsVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    array = @[@"details0", @"details1", @"details2", @"details0", @"details1", @"details2", @"details0", @"details1", @"details2", @"details3"];
+    
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    [self.collectionView setTransform:CGAffineTransformMakeScale(-1, 1)];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 10;
 }
-*/
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    DetailsCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DetailsCVC" forIndexPath:indexPath];
+    cell.imageView.image = [UIImage imageNamed:[array objectAtIndex:indexPath.row % array.count]];
+    return cell;
+}
 
 @end

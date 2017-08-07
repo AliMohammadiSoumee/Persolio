@@ -24,11 +24,11 @@
     
     layoutAttributes = [NSMutableDictionary new];
     width = self.collectionView.bounds.size.width;
-    CGFloat horSpace = 20, verSpace = 10;
+    CGFloat horSpace = 10, verSpace = 10;
     yPos = verSpace;
     
     CGFloat bigCellWidth = width - 2 * horSpace;
-    CGFloat bigCellHeight = bigCellWidth * 0.8;
+    CGFloat bigCellHeight = bigCellWidth * 0.85;
     CGFloat smallCellWidth = (width - 2 * horSpace - 5) / 2;
     
     CGFloat xPos0 = horSpace, xPos1 = horSpace, xPos2 = horSpace + 5 + smallCellWidth;

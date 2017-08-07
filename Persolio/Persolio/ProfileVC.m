@@ -39,7 +39,7 @@
     [super viewDidLoad];
     
     [self prepareTabBarV];
-    [self addEventV];
+    [self addBasketV];
     [self configNavBar];
     
     [self registerForPreviewingWithDelegate:self sourceView:self.view];
@@ -102,10 +102,10 @@
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     if (item.tag == 1) {
-        [self addEventV];
+        [self addBasketV];
     }
     else if (item.tag == 2) {
-        [self addLastEventsV];
+        [self addEventV];
     }
     else if (item.tag == 3) {
         [self addCartV];
