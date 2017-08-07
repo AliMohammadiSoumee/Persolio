@@ -15,7 +15,7 @@
     NSInteger num1;
     NSInteger num2;
     UICollectionReusableView *headerV;
-    
+    NSArray *array, *title, *bookArray;
 }
 
 @end
@@ -25,6 +25,12 @@
 
 
 - (void)prepareCollectionView {
+    
+    array = @[@"buy0.jpg", @"football0.jpg", @"friend0.jpg", @"park0.jpg", @"safar0.jpg", @"carting0.jpg", @"buy1.jpg", @"football1.jpg", @"friend1.jpg", @"park1.jpg", @"safar1.jpg", @"carting1.jpg"];
+    title = @[@"خرید", @"فوتبال", @"دوست", @"پارک", @"سفر", @"کارتینگ", @"خرید", @"فوتبال", @"دوست", @"پارک", @"سفر", @"کارتینگ"];
+
+    bookArray = @[@"book0.jpg", @"book1.jpg", @"book2.jpg", @"book3.jpg"];
+    
     num1 = 4;
     num2 = 21;
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
@@ -64,12 +70,12 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         CartCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CartCVC" forIndexPath:indexPath];
-        
+        cell.imageView.image = [UIImage imageNamed:[bookArray objectAtIndex:(indexPath.row % bookArray.count)]];
         return cell;
     }
     else {
         CartCVC1 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CartCVC1" forIndexPath:indexPath];
-        
+        cell.imageView.image = [UIImage imageNamed:[array objectAtIndex:(indexPath.row % array.count)]];
         return cell;
     }
     
@@ -85,7 +91,7 @@
             UIButton *filterBtn = [UIButton new];
             UIButton *addBtn = [UIButton new];
             
-            [filterBtn setImage:[UIImage imageNamed:@"filter-on"] forState:UIControlStateNormal];
+            [filterBtn setImage:[UIImage imageNamed:@"filter-off"] forState:UIControlStateNormal];
             [addBtn setImage:[UIImage imageNamed:@"plus-off"] forState:UIControlStateNormal];
             
             UIView *middle = [UIView new];

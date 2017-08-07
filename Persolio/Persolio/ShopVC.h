@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShopVC : UIViewController
+@interface ShopVC : UIViewController <UIPageViewControllerDelegate>
+
 
 @end

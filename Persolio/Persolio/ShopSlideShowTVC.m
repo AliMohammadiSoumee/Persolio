@@ -8,6 +8,10 @@
 
 #import "ShopSlideShowTVC.h"
 
+@interface ShopSlideShowTVC() <UIScrollViewDelegate>
+
+@end
+
 @implementation ShopSlideShowTVC
 
 - (void)awakeFromNib {
@@ -16,6 +20,8 @@
 }
 
 - (void)prepareWith:(CGFloat)width {
+    self.scrollView.delegate = self;
+    _pageControl.numberOfPages = 3;
     UIImageView *lastImgV;
     for (int i = 0; i < 3; i++) {
         UIImageView *image = [UIImageView new];
@@ -39,5 +45,10 @@
         lastImgV = image;
     }
     [lastImgV sdc_alignEdgesWithSuperview:UIRectEdgeRight];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    int page = scrollView.contentOffset.x / scrollView.frame.size.width;
+    [_pageControl setCurrentPage:page];
 }
 @end

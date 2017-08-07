@@ -19,6 +19,7 @@
 - (void)prepare {
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
+    self.titleLb.text = _title;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -31,7 +32,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ShopCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShopCVC" forIndexPath:indexPath];
-    cell.imageView.image = [UIImage imageNamed:@"Karbin.png"];
+    cell.imageView.image = [UIImage imageNamed:[_array objectAtIndex:indexPath.row % _array.count]];
     return cell;
 }
 

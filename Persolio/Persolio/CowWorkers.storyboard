@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -61,14 +62,19 @@
                                                         <constraint firstItem="fp9-bm-mhb" firstAttribute="top" secondItem="nLn-6J-TI0" secondAttribute="top" id="jfO-oN-SAc"/>
                                                     </constraints>
                                                 </scrollView>
+                                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="oEu-hF-fsF">
+                                                    <rect key="frame" x="168" y="119.5" width="39" height="37"/>
+                                                </pageControl>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="fp9-bm-mhb" firstAttribute="height" secondItem="BKt-RJ-qdd" secondAttribute="height" id="0OH-fC-ouy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oEu-hF-fsF" secondAttribute="bottom" id="D19-Tz-GhJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="nLn-6J-TI0" secondAttribute="bottom" id="FMB-gv-3Sk"/>
                                                 <constraint firstItem="nLn-6J-TI0" firstAttribute="top" secondItem="BKt-RJ-qdd" secondAttribute="top" id="c0d-zR-daw"/>
                                                 <constraint firstItem="fp9-bm-mhb" firstAttribute="width" secondItem="BKt-RJ-qdd" secondAttribute="width" priority="900" id="evd-FL-Iw5"/>
                                                 <constraint firstAttribute="trailing" secondItem="nLn-6J-TI0" secondAttribute="trailing" id="iSF-Fb-dRo"/>
+                                                <constraint firstItem="oEu-hF-fsF" firstAttribute="centerX" secondItem="BKt-RJ-qdd" secondAttribute="centerX" id="y09-I6-Nac"/>
                                                 <constraint firstItem="nLn-6J-TI0" firstAttribute="leading" secondItem="BKt-RJ-qdd" secondAttribute="leading" id="yf4-aj-j2a"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -76,6 +82,8 @@
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="contentV" destination="fp9-bm-mhb" id="Hgj-mQ-kUV"/>
+                                            <outlet property="pageControl" destination="oEu-hF-fsF" id="661-4Y-6J7"/>
+                                            <outlet property="scrollView" destination="nLn-6J-TI0" id="cFW-o1-rWH"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="CoWorkersTVC" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="CoWorkersTVC" rowHeight="250" id="s8F-ou-MuG" customClass="CoWorkersTVC">
@@ -291,7 +299,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سابقه:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2g-Pv-aPD">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سوابق:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2g-Pv-aPD">
                                                         <rect key="frame" x="275" y="531" width="70" height="22.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="Iml-4p-yzz"/>
@@ -569,7 +577,7 @@
             <objects>
                 <navigationController storyboardIdentifier="CoWorkersNavC" automaticallyAdjustsScrollViewInsets="NO" id="qNe-RO-OAS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pnk-0E-oHR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Pnk-0E-oHR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

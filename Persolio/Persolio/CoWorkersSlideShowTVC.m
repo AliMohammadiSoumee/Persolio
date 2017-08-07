@@ -8,6 +8,11 @@
 
 #import "CoWorkersSlideShowTVC.h"
 
+@interface CoWorkersSlideShowTVC() <UIScrollViewDelegate>
+
+@end
+
+
 @implementation CoWorkersSlideShowTVC
 
 - (void)awakeFromNib {
@@ -23,6 +28,8 @@
 
 
 - (void)prepareWith:(CGFloat)width {
+    _scrollView.delegate = self;
+    _pageControl.numberOfPages = 3;
     UIImageView *lastImgV;
     for (int i = 0; i < 3; i++) {
         UIImageView *image = [UIImageView new];
@@ -50,6 +57,11 @@
     [lastImgV sdc_alignEdgesWithSuperview:UIRectEdgeRight];
 }
 
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    int page = scrollView.contentOffset.x / scrollView.frame.size.width;
+    [_pageControl setCurrentPage:page];
+}
 
 
 @end

@@ -13,6 +13,7 @@
 {
     int num;
     UICollectionReusableView *headerV;
+    NSArray *array, *title;
 }
 
 @end
@@ -23,6 +24,10 @@
 
 
 - (void)prepareCollectionView {
+    
+    array = @[@"buy0.jpg", @"football0.jpg", @"friend0.jpg", @"park0.jpg", @"safar0.jpg", @"carting0.jpg", @"buy1.jpg", @"football1.jpg", @"friend1.jpg", @"park1.jpg", @"safar1.jpg", @"carting1.jpg"];
+    title = @[@"خرید", @"فوتبال", @"دوست", @"پارک", @"سفر", @"کارتینگ", @"خرید", @"فوتبال", @"دوست", @"پارک", @"سفر", @"کارتینگ"];
+    
     num = 21;
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.minimumLineSpacing = 5;
@@ -54,6 +59,10 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     LastEventsCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LastEventsCVC" forIndexPath:indexPath];
+    
+    cell.imageView.image = [UIImage imageNamed:[array objectAtIndex:indexPath.row % array.count]];
+    cell.title.text = [title objectAtIndex:indexPath.row % title.count];
+    
     return cell;
 }
 

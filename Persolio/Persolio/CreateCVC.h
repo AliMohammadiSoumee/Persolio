@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CreateCVC : UICollectionViewCell
+@property (retain, nonatomic) NSIndexPath* indexPath;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *borderImageView;
 

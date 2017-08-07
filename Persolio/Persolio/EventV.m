@@ -14,6 +14,8 @@
 {
     CGFloat num;
     UICollectionReusableView *headerV;
+    NSArray *array;
+    NSArray *title;
 }
 @end
 
@@ -22,6 +24,10 @@
 
 
 - (void)prepareCollectionView {
+    
+    array = @[@"buy0.jpg", @"friend0.jpg", @"park0.jpg", @"safar0.jpg", @"carting0.jpg", @"buy1.jpg", @"football1.jpg", @"friend1.jpg", @"park1.jpg", @"safar1.jpg", @"carting1.jpg", @"football0.jpg"];
+    title = @[@"خرید", @"دوست", @"پارک", @"سفر", @"کارتینگ", @"خرید", @"فوتبال", @"دوست", @"پارک", @"سفر", @"کارتینگ", @"فوتبال"];
+    
     num = 21;
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.minimumLineSpacing = 5;
@@ -53,6 +59,8 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     EventCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventCVC" forIndexPath:indexPath];
+    cell.imageView.image = [UIImage imageNamed:[array objectAtIndex:indexPath.row % array.count]];
+    cell.title.text = [title objectAtIndex:indexPath.row % title.count];
     return cell;
 }
 
@@ -64,7 +72,7 @@
         UIButton *filterBtn = [UIButton new];
         UIButton *addBtn = [UIButton new];
         
-        [filterBtn setImage:[UIImage imageNamed:@"filter-on"] forState:UIControlStateNormal];
+        [filterBtn setImage:[UIImage imageNamed:@"filter-off"] forState:UIControlStateNormal];
         [addBtn setImage:[UIImage imageNamed:@"plus-off"] forState:UIControlStateNormal];
         
         UIView *middle = [UIView new];

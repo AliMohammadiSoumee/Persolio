@@ -10,6 +10,8 @@
 
 @interface CoWorkersSlideShowTVC : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *contentV;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (void)prepareWith:(CGFloat)width;
 

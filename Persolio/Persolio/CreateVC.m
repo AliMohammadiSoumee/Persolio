@@ -25,6 +25,7 @@
     list = [NSArray arrayWithObjects:@"Sketch.png", @"Drawing.png", @"2DFlat.png", nil];
     selectedItem = 0;
     
+    _collectionView.prefetchingEnabled = NO;
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
 }
@@ -73,6 +74,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CreateCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CreateCVC" forIndexPath:indexPath];
     
+    
     cell.borderImageView.image = nil;
     if (indexPath.row + 1 == [collectionView numberOfItemsInSection:indexPath.section]) {
         cell.imageView.image = [UIImage imageNamed:@"AddNew.png"];
@@ -89,13 +91,13 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSIndexPath *index = [NSIndexPath indexPathForRow:selectedItem inSection:0];
+    NSIndexPath *index = [NSIndexPath indexPathForItem:selectedItem inSection:0];
     CreateCVC *cell = (CreateCVC*)[collectionView cellForItemAtIndexPath:index];
     cell.borderImageView.image = nil;
     
     selectedItem = indexPath.row;
     
-    index = [NSIndexPath indexPathForRow:selectedItem inSection:0];
+    index = [NSIndexPath indexPathForItem:selectedItem inSection:0];
     cell = (CreateCVC*)[collectionView cellForItemAtIndexPath:index];
     cell.borderImageView.image = [UIImage imageNamed:@"BorderImageV.png"];
 }

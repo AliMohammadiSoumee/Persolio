@@ -13,6 +13,7 @@
 {
     int num;
     UICollectionReusableView *headerV;
+    NSArray *array;
 }
 
 @end
@@ -20,6 +21,9 @@
 @implementation BasketV
 
 - (void)prepareCollectionView {
+    array = @[@"buy0.jpg", @"football0.jpg", @"friend0.jpg", @"park0.jpg", @"safar0.jpg", @"carting0.jpg", @"buy1.jpg", @"football1.jpg", @"friend1.jpg", @"park1.jpg", @"safar1.jpg", @"carting1.jpg"];
+
+    
     num = 21;
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.minimumLineSpacing = 5;
@@ -51,6 +55,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BasketCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BasketCVC" forIndexPath:indexPath];
+    cell.imageView.image = [UIImage imageNamed:[array objectAtIndex:indexPath.row % array.count]];
     return cell;
 }
 

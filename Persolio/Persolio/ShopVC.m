@@ -11,8 +11,11 @@
 #import "ShopTVC.h"
 
 @interface ShopVC () <UITableViewDelegate, UITableViewDataSource>
+{
+    NSArray *array;
+    NSArray *title;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @end
 
 @implementation ShopVC
@@ -22,6 +25,8 @@
     
     [self configNavBar];
     
+    array = @[@[@"book0.jpg", @"book1.jpg", @"book2.jpg", @"book3.jpg"], @[@"card0.jpg", @"card1.jpg", @"card2.jpg", @"card3.jpg"], @[@"voice0.jpg", @"voice1.jpg", @"voice2.jpg"]];
+    title = @[@"کتاب", @"فلش کارت", @"صدا"];
     _tableView.delegate = self;
     _tableView.dataSource = self;
 }
@@ -54,6 +59,8 @@
     }
     else {
         ShopTVC *cell = [tableView dequeueReusableCellWithIdentifier:@"ShopTVC"];
+        cell.array = [array objectAtIndex:(indexPath.row + 1) % array.count];
+        cell.title = [title objectAtIndex:(indexPath.row + 1) % title.count];
         [cell prepare];
         return cell;
     }

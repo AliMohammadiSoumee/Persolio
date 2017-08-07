@@ -16,7 +16,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.layer.cornerRadius = 30;
-        self.backgroundColor = [UIColor yellowColor];
         self.clipsToBounds = YES;
         
         
@@ -31,8 +30,7 @@
         _title.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.80];
         _title.textAlignment = NSTextAlignmentCenter;
         _title.textColor = [UIColor colorWithRed:185.0/225 green:185.0/255 blue:120.0/255 alpha:1];
-        _title.text = @"TEST";
-        [_title setFont:[UIFont fontWithName:@"IRANSansMobile_Medium.ttf" size:24]];
+        [_title setFont:[UIFont fontWithName:@"IRANSansMobile-Medium" size:24]];
         [self addSubview:_title];
         _title.translatesAutoresizingMaskIntoConstraints = NO;
         [_title sdc_alignEdgesWithSuperview:UIRectEdgeAll ^ UIRectEdgeTop];

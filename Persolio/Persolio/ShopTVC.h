@@ -10,6 +10,10 @@
 
 @interface ShopTVC : UITableViewCell <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLb;
+
+@property (nonatomic, strong) NSArray *array;
+@property (nonatomic, strong) NSString *title;
 
 - (void)prepare;
 @end
